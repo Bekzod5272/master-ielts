@@ -2,7 +2,7 @@
 
 </script>
 <template>
-  <section class="promo">
+  <div class="promo">
     <div class="promo__background"></div>
 
     <div class="promo__content">
@@ -18,15 +18,14 @@
     </div>
 
     <div class="promo__image">
-      <img src="/public/images/photo_2024-09-23_17-46-15.jpg" alt="Sherzod Mutalipov" />
     </div>
-  </section>
+  </div>
 
 </template>
 <style lang="scss">
 .promo {
-  &__image {
-
+  &__title {
+    font-size: 25px;
   }
 }
 </style>
