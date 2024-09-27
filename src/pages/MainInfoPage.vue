@@ -17,7 +17,7 @@ import AppBtn from "@/components/AppBtn.vue";
        </p>
      </div>
       <div class="master-ielts__content__call">
-        <app-btn/>
+        <app-btn class="master-ielts__content__call__btn"/>
         <p class="master-ielts__extra-text">
           Запишитесь на индивидуальную бесплатную стратегическую сессию к Ивану Максимову.
         </p>
