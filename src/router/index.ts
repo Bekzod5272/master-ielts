@@ -1,10 +1,18 @@
-import index from '@/pages/MainInfoPage.vue'
+import App from '@/App.vue'
+import MainInfoPage from "@/pages/MainInfoPage.vue";
 
 const router = [
   {
     path:'',
-    name:'index',
-    component:index
+    name:'main',
+    component:App,
+      children:[
+          {
+              path:'',
+              name:'main-info',
+              component:MainInfoPage
+          }
+      ]
   }
 ]
 

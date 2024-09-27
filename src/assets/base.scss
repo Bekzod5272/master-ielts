@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  src: url("/public/fonts/BebasNeue Bold.otf");
+  font-family: BebasNeue;
+}
+@font-face {
+  src: url("/public/fonts/bahnschrift.ttf");
+  font-family: Bahnschrift;
+}
+@font-face {
+  src: url("/public/fonts/GothamPro-Bold.ttf");
+  font-family: GothamProBold;
+}
+@font-face {
+  src: url("/public/fonts/GothamPro-Black.ttf");
+  font-family: GothamProBlack;
+}
+@font-face {
+  src: url("/public/fonts/GothamPro-Medium.ttf");
+  font-family: GothamProMedium;
+}
+@font-face {
+  src: url("/public/fonts/NORWESTER.ttf");
+  font-family: NORWESTER;
+}
+@font-face {
+  src: url("/public/fonts/PLAY-BOLD.ttf");
+  font-family: PLAY-BOLD;
+}
+@font-face {
+  src: url("/public/fonts/PLAY-REGULAR.ttf");
+  font-family: PLAY_REGULAR;
+}
+@font-face {
+  src: url("/public/fonts/OFONT.RU_LAINYDAY.ttf");
+  font-family: OFONT_RU_LAINYDAY;
+}
