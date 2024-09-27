@@ -55,7 +55,7 @@
   position: absolute;
   gap: 20px;
   left: 50%;
-  margin-top: 80px;
+  margin-top: 150px;
   transform: translateX(-50%);
   z-index: 1111;
   text-align: center;
@@ -145,7 +145,7 @@
     flex-direction: column;
     gap: 10px;
     left: 50%;
-    margin-top: 10%;
+    margin-top: 15%;
     transform: translateX(-50%);
     z-index: 1111;
 
@@ -161,11 +161,14 @@
   }
 }
 
+@media (max-width: 768px) {
+  .master-ielts__image img {
+    top: 50%;
+  }
+}
+
 @media (max-width: 576px) {
 
-  .master-ielts__image img {
-    top: 60%;
-  }
   .master-ielts__subtitle {
     top: 220px;
     font-size: 10px;
