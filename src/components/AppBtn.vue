@@ -8,6 +8,7 @@
 
 <style scoped>
 .custom-button {
+  cursor: pointer;
   img {
     width: 200px;
     @media (max-width: 576px) {

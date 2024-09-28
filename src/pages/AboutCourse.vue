@@ -2,6 +2,14 @@
 import {dataInfoCourseFirstPage} from "@/constans";
 import {dataInfoCourseSecondPage} from "@/constans";
 import AppBtn from "@/components/AppBtn.vue";
+
+
+function scrollToForm() {
+  document.getElementById("qabulga-yozilish").scrollIntoView({
+    behavior: "smooth"
+  })
+  alert('dsa')
+}
 </script>
 <template>
   <div class="about-ielts container">
@@ -57,7 +65,7 @@ import AppBtn from "@/components/AppBtn.vue";
       </div>
     </div>
     <img src="/public/images/book.png" class="about-ielts__back-image img-fluid"/>
-    <app-btn class="about-ielts__footer-btn"/>
+    <app-btn class="about-ielts__footer-btn" href="#" @click="scrollToForm()"/>
   </div>
 </template>
 <style scoped lang="scss">
@@ -140,6 +148,7 @@ import AppBtn from "@/components/AppBtn.vue";
     }
 
   }
+
   &__footer-btn {
     position: absolute;
     bottom: -20px;
@@ -158,6 +167,7 @@ import AppBtn from "@/components/AppBtn.vue";
   &__items {
     margin-bottom: 20px;
   }
+
   &__footer {
     display: flex;
     justify-content: center;

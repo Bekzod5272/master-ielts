@@ -36,7 +36,7 @@
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  font-family: GothamPro;
+  font-family: PLAY_REGULAR;
   color: white;
   margin-top: 100px;
 }

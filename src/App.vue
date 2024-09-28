@@ -4,6 +4,8 @@ import InfoForIelts from "@/pages/InfoForIelts.vue";
 import AboutMentors from "@/pages/AboutMentors.vue";
 import AboutCourse from "@/pages/AboutCourse.vue";
 import AboutEducation from "@/pages/AboutEducation.vue";
+import AuthPage from "@/pages/AuthPage.vue";
+import AppFooter from "@/pages/AppFooter.vue";
 
 
 </script>
@@ -16,6 +18,8 @@ import AboutEducation from "@/pages/AboutEducation.vue";
       <about-course/>
     </div>
     <about-education/>
+    <auth-page/>
+    <app-footer/>
   </div>
 </template>
 <style lang="scss">
@@ -26,7 +30,6 @@ import AboutEducation from "@/pages/AboutEducation.vue";
   background-size: cover;
   background-position: top center;
   position: relative;
-  z-index: -1;
 }
 
 .infos-for-ielts {
