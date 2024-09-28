@@ -2,7 +2,10 @@
 import {dataInfoCourseFirstPage} from "@/constans";
 import {dataInfoCourseSecondPage} from "@/constans";
 import AppBtn from "@/components/AppBtn.vue";
+import 'swiper/swiper-bundle.min.css';
+import AppSwiper from "@/components/AppSwiper.vue";
 
+const combinedArray = dataInfoCourseSecondPage.concat(dataInfoCourseFirstPage)
 
 function scrollToForm() {
   document.getElementById("qabulga-yozilish").scrollIntoView({
@@ -14,19 +17,21 @@ function scrollToForm() {
 <template>
   <div class="about-ielts container">
     <div class="about-ielts__content">
-      <div class="about-ielts__header">
-        <div class="about-ielts__title">
-          <p>
-            BIZNING
-          </p>
-          <p>
-            KURSLAR
-          </p>
-        </div>
-      </div>
+      <app-swiper :data="combinedArray"/>
     </div>
+
     <div class="about-ielts__courses">
       <div class="course-list">
+        <div class="about-ielts__header">
+          <div class="about-ielts__title">
+            <p class="about-ielts__title__our">
+              BIZNING
+            </p>
+            <p class="about-ielts__title__course">
+              KURSLAR
+            </p>
+          </div>
+        </div>
         <div class="course-list-left" v-for="items in dataInfoCourseFirstPage">
           <div class="course-list__item">
             <div class="course-list__item__content">
@@ -37,7 +42,7 @@ function scrollToForm() {
                 </p>
               </div>
               <div class="course-list__item-image">
-                <img :src="items.path" :alt="items.path" class="img-fluid"/>
+                <img :src="items.path" :alt="items.path"/>
               </div>
             </div>
           </div>
@@ -54,7 +59,7 @@ function scrollToForm() {
                 </p>
               </div>
               <div class="course-list__item-image">
-                <img :src="items.path" :alt="items.path" class="img-fluid"/>
+                <img :src="items.path" :alt="items.path"/>
               </div>
             </div>
           </div>
@@ -64,40 +69,58 @@ function scrollToForm() {
         </div>
       </div>
     </div>
-    <img src="/public/images/book.png" class="about-ielts__back-image img-fluid"/>
     <app-btn class="about-ielts__footer-btn" href="#" @click="scrollToForm()"/>
   </div>
+
 </template>
-<style scoped lang="scss">
+<style lang="scss">
 .about-ielts {
   width: 100%;
-  background-image: url('public/images/img_5.png');
+  background-image: url('public/images/book.png');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   position: relative;
   top: -20px;
   border-radius: 16px;
+  @media (max-width: 768px) {
+    top: -40px;
+  }
 
-  &__back-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  &__content {
+    display: none;
+    position: relative;
+    z-index: 11;
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
   &__header {
-
+    text-align: center;
   }
 
   &__title {
     display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    font-weight: 900;
+    font-family: GothamProBlack;
 
+    &__our {
+      color: #9D84FD;
+    }
   }
 
   &__courses {
     width: 100%;
     display: flex;
     justify-content: center;
+    @media (max-width: 991px) {
+      gap: 50px;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .course-list {
@@ -106,6 +129,7 @@ function scrollToForm() {
     padding: 30px 20px;
     position: sticky;
     z-index: 2;
+      margin-top: 25px;
 
     &__item {
       &__content {
@@ -117,14 +141,13 @@ function scrollToForm() {
         &__info {
           display: flex;
           flex-direction: column;
+          height: fit-content;
+          @media (max-width: 768px) {
+            justify-content: center;
+            padding: 20px;
+          }
         }
       }
-    }
-
-    &__item-image {
-      width: fit-content;
-      height: 180px;
-      margin-bottom: auto;
     }
 
     &__item-title {
@@ -134,28 +157,58 @@ function scrollToForm() {
       border: none;
       border-radius: 4px;
       padding: 5px 20px;
+      font-size: 14px;
       margin-bottom: 10px;
+      font-family: "Segoe Print";
+      @media (max-width: 991px) {
+        font-size: 12px;
+        padding: 5px 15px;
+      }
+      @media (max-width: 768px) {
+        margin: 10px auto;
+        font-size: 20px;
+        font-family: PLAY-BOLD;
+
+      }
     }
 
     &__item-description {
       height: fit-content;
-      padding: 10px;
+      padding: 5px;
       font-size: 14px;
       border: 3px solid #714FFB;
       border-right: none;
       border-radius: 7px;
+      font-family: "Segoe Print";
       clip-path: polygon(0% 10%, 100% -4%, 100% 97%, 0 100%);
+      @media (max-width: 991px) {
+        font-size: 12px;
+      }
+      @media (max-width: 768px) {
+        font-family: GothamProMedium;
+        font-size: 18px;
+        border-top: none;
+        clip-path: polygon(0% 0, 100% -4%, 100% 97.5%, 0 100%);
+      }
     }
 
   }
 
   &__footer-btn {
     position: absolute;
-    bottom: -20px;
+    bottom: -35px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
   }
+}
+
+.course-list__item-image {
+  margin-bottom: auto;
+}
+.course-list__item-image img {
+  width: 80px;
+  height: 80px;
 }
 
 .course-list-right {
@@ -163,6 +216,7 @@ function scrollToForm() {
   padding: 30px;
   position: sticky;
   z-index: 2;
+    margin-top: 25px;
 
   &__items {
     margin-bottom: 20px;
@@ -172,10 +226,6 @@ function scrollToForm() {
     display: flex;
     justify-content: center;
   }
-}
-
-.course-list-left {
-  margin-bottom: 20px;
 }
 
 .course-list-left:nth-child(even) {
@@ -200,5 +250,9 @@ function scrollToForm() {
     border-left: none;
     border-right: 2px solid #714FFB;
   }
+}
+
+.swiper-pagination-bullets {
+  margin-bottom: 20px !important;
 }
 </style>

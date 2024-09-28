@@ -79,7 +79,7 @@ function handleSubmit() {
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .auth-container {
   color: white;
   height: fit-content;
@@ -118,7 +118,6 @@ function handleSubmit() {
 }
 
 .auth-left__subtitle {
-  font-size: 2.5em;
   font-weight: 800;
   margin-bottom: 20px;
   font-family: OFONT_RU_LAINYDAY;
@@ -137,7 +136,7 @@ function handleSubmit() {
   margin-right: 20px;
   @media (max-width: 1024px) {
     display: none;
-    margin-right:0;
+    margin-right: 0;
   }
 }
 
@@ -178,13 +177,21 @@ function handleSubmit() {
   border: none;
 }
 
+.auth-form__button {
+  img {
+    width: 130px !important;
+    @media (max-width: 768px) {
+      width: 200px !important;
+    }
+  }
+}
 
 .auth-contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: inherit;
   font-family: GothamProMedium;
 }

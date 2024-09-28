@@ -4,7 +4,7 @@
   <div class="footer container">
     <div class="footer__container">
       <div class="footer__logo">
-        <img src="/public/images/master-ielts-word2.png">
+        <img src="/public/images/master-ielts-word2.png" class="img-fluid" alt="master-ielts-word2"/>
       </div>
       <div class="footer__nav">
         <div>
@@ -58,10 +58,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 10px;
 }
 
 .footer__logo {
-  width: 30%;
+  width: 29%;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .footer__logo img {
@@ -70,8 +74,16 @@
 
 .footer__nav {
   display: flex;
-  width: 70%;
-  justify-content: space-around;
+  width: 69%;
+  justify-content: space-evenly;
+  @media (max-width: 991px) {
+    gap: 15px;
+    justify-content: right;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: start;
+  }
 
   &__title {
     padding: 0 0 0 5px;
@@ -107,6 +119,7 @@
     font-size: 18px;
     font-family: GothamProMedium;
   }
+
   a {
     padding: 5px;
     color: #fff;
@@ -117,6 +130,7 @@
     }
   }
 }
+
 .footer__social {
   margin-top: 20px;
 }
