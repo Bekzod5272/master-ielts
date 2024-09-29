@@ -6,6 +6,7 @@ import AboutCourse from "@/pages/AboutCourse.vue";
 import AboutEducation from "@/pages/AboutEducation.vue";
 import AuthPage from "@/pages/AuthPage.vue";
 import AppFooter from "@/pages/AppFooter.vue";
+import LocationMap from "@/pages/LocationMap.vue";
 
 
 </script>
@@ -19,6 +20,7 @@ import AppFooter from "@/pages/AppFooter.vue";
     </div>
     <about-education/>
     <auth-page/>
+<!--    <location-map/>-->
     <app-footer/>
   </div>
 </template>

@@ -9,7 +9,7 @@ import AppBtn from "@/components/AppBtn.vue";
 
     <div class="master-ielts__content">
        <h1 class="master-ielts__title">MASTER IELTS</h1>
-     <div>
+     <div class="master-ielts__content__text">
        <p class="master-ielts__hide-name">Sherzod Mutalipov</p>
        <div class="master-ielts__subtitle">Sherzod Mutalipov</div>
        <p class="master-ielts__description">

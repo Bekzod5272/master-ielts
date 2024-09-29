@@ -2,7 +2,7 @@ export const dataInfoCourseFirstPage = [
     {
         id: 1,
         btnText: 'IELTS STANDART',
-        text: 'Elementary darajasidan IELTS darajasiga 6-9 oy ichida erishing! Master IELTS bilan har ikki kunda 2 soatdan darslar o\'tkaziladi. Bu faqatgina darslar emas, balki ingliz tili muhitiga haqiqiy sho\'ng\'ishdir.',
+        text: 'Elementary darajadan IELTS darajasiga 6-9 oy ichida erishing! Master IELTS bilan har ikki kunda 2 soatlik darslar o‘tkaziladi. Bu faqatgina darslar emas, balki ingliz tili muhitiga haqiqiy sho‘ng‘ishdir.',
         path: '/public/images/ielts-standard.png',
     },
     {
@@ -34,18 +34,18 @@ export const dataInfoCourseSecondPage = [
 ]
 export const dataInfoIelts = [
     {
-        text: 'IELTS dan <strong>yuqori ball</strong> olmoqchimisiz? Bunga bizda yechim bor,',
-        strong: 'hoziroq qabulga yoziling.',
+        text:'Tayyorlangan Savollardan Ko’ra,  <strong></strong> O’zingizni Moslashtiring',
+        strong: 'Spontan Suhbatga',
         iconClass: "fa-solid fa-circle-dot"
     },
     {
-        text: 'IELTS dan <strong>yuqori ball</strong> olmoqchimisiz? Bunga bizda yechim bor,',
-        strong: 'hoziroq qabulga yoziling.',
+        text:'Leksik Boylikni Oshirish va Turli Iboralarni',
+        strong: 'Qo’llash',
         iconClass: "fa-solid fa-star"
     },
     {
-        text: 'IELTS dan <strong>yuqori ball</strong> olmoqchimisiz? Bunga bizda yechim bor,',
-        strong: 'hoziroq qabulga yoziling.',
+        text:'Talafuz va Intonatsiyaga',
+        strong: 'E’tibor.',
         iconClass: "fa-solid fa-circle-dot"
     }
 ]

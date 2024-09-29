@@ -9,10 +9,9 @@ const name = ref('')
 const phoneNumber = ref('')
 
 function handleSubmit() {
-  if (!name.value || !phoneNumber.value) return toast.error("Iltimos ma'lumotlarni kiriting",
+  if (!name.value || !phoneNumber.value) return toast.error("Iltimos ismingiz va raqamingizni kiriting kiriting",
       {
         position: 'bottom-center',
-        timeout: 3000
       }
   )
   axios.get('https://api.telegram.org/bot7912836970:AAEi1lJACzuHlfkleVrkQoHDlOkJHwRx_LY/sendMessage', {
@@ -21,7 +20,7 @@ function handleSubmit() {
       text: `Ism:${name.value} \n\nTelefon raqami:${phoneNumber.value}`,
       parse_mode: 'Markdown'
     }
-  }).then(() => toast.success("Ma'lumotlaringiz qabul qilingi"))
+  }).then(() => toast.success("Ma'lumotlaringiz qabul qilingi", {position: 'bottom-center'}))
 }
 </script>
 
@@ -32,9 +31,9 @@ function handleSubmit() {
 
       <div class="auth-left">
         <div class="auth-left-section">
-          <h2 class="auth-left__subtitle">СВЯЗАТЬСЯ</h2>
+          <h2 class="auth-left__subtitle">BOG’LANISH</h2>
           <p class="auth-left__text">
-            Оставьте заявку и наши менеджеры в скором времени свяжутся с вами
+            Ariza qoldiring va bizning menejyorlarimiz tez orada siz bilan bog’lanishadi.
           </p>
         </div>
         <div class="auth-left-section__img">

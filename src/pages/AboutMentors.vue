@@ -25,7 +25,7 @@ const mentors = [
           <div class="mentors-section__information__btn">
             <i class="fa-solid fa-user"/>
             <p>
-              Sinalgan yo'li
+              Ro’yxatdan o’tish kerak
             </p>
           </div>
         </div>
