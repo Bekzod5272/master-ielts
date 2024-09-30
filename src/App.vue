@@ -20,7 +20,7 @@ import LocationMap from "@/pages/LocationMap.vue";
     </div>
     <about-education/>
     <auth-page/>
-<!--    <location-map/>-->
+    <location-map/>
     <app-footer/>
   </div>
 </template>

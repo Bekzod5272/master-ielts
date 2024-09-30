@@ -178,16 +178,12 @@ function handleSubmit() {
 
 .auth-form__button {
   img {
-    width: 130px !important;
-    @media (max-width: 768px) {
-      width: 200px !important;
-    }
+    width: 180px !important;
   }
 }
 
 .auth-contact {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 10px;
   font-size: 15px;

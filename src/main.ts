@@ -4,13 +4,12 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
 import Vue3Toasity, {type ToastContainerOptions} from 'vue3-toastify';
 import { createYmaps } from 'vue-yandex-maps';
 
-app.use(router,createYmaps({apikey:''}), Vue3Toasity, {
-    autoClose: 3000,
-    position: "bottom-right",
-} as ToastContainerOptions);
+const app = createApp(App);
 
+app.use(router)
+app.use(createYmaps({apikey:'cd38a715-a2ba-4c42-9103-83b76b5dc0b0'}));
+app.use(Vue3Toasity)
 app.mount('#app')

@@ -2,20 +2,20 @@
 import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVideoLinksEvenThree,dataVideoLinksEvenFive} from "@/constans/video-links";
 </script>
 <template>
-  <div class="about-education container">
-    <div class="about-education-header">
-      <div class="about-education-header__img">
-        <img src="/public/images/master-ielts-word.png" class="img-fluid"/>
-      </div>
-      <div class="about-education-title">
-        <p>
-          Master IELTS — ingliz tilini o’rgatish bo’yicha 9 yildan ortiq tajribaga ega va maxsus Mutalipov
-          Sherzod tomonidan ishlab chiqilgan o’ziga xos metodikaga asoslanadi. Biz boshqa ta’lim markazlari singari
-          ishlamaymiz; har bir talabani individual ravishda o’rgatamiz va mavzularni chuqur tushuntiramiz, tariflardan
-          farqli o’laroq! Faqat sifat va natija.
-        </p>
-      </div>
+  <div class="about-education-header main-container">
+    <div class="about-education-header__img">
+      <img src="/public/images/master-ielts-word.png" class="img-fluid"/>
     </div>
+    <div class="about-education-title">
+      <p>
+        Master IELTS — ingliz tilini o’rgatish bo’yicha 9 yildan ortiq tajribaga ega va maxsus Mutalipov
+        Sherzod tomonidan ishlab chiqilgan o’ziga xos metodikaga asoslanadi. Biz boshqa ta’lim markazlari singari
+        ishlamaymiz; har bir talabani individual ravishda o’rgatamiz va mavzularni chuqur tushuntiramiz, tariflardan
+        farqli o’laroq! Faqat sifat va natija.
+      </p>
+    </div>
+  </div>
+  <div class="about-education main-container">
     <div>
       <div class="grid-container">
         <div class="grid-container__first">
@@ -50,7 +50,10 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
 <style lang="scss" scoped>
 .about-education-header {
   width: 100%;
-  height: auto;
+  height: auto; 
+  background-image: url("/public/images/soya.png");
+  background-position: top;
+  background-size: cover;
 
   &__img {
     display: flex;
@@ -61,7 +64,12 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
     width: 800px;
   }
 }
-
+.about-education{
+  pointer-events: none;
+  background-image: url("/public/images/soya2.png");
+  background-size: cover;
+  background-position: top;
+}
 .about-education-title {
   width: 70%;
   margin: 0 auto;
