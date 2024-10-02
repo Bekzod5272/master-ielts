@@ -4,15 +4,15 @@ import {dataInfoCourseSecondPage} from "@/constans";
 import AppBtn from "@/components/AppBtn.vue";
 import 'swiper/swiper-bundle.min.css';
 import AppSwiper from "@/components/AppSwiper.vue";
+import eventBus from '@/constans/eventBus';
+
+function handleButtonClick() {
+  eventBus.emit('scroll-to-auth');
+}
 
 const combinedArray = dataInfoCourseSecondPage.concat(dataInfoCourseFirstPage)
 
-function scrollToForm() {
-  document.getElementById("qabulga-yozilish").scrollIntoView({
-    behavior: "smooth"
-  })
-  alert('dsa')
-}
+
 </script>
 <template>
   <div class="about-ielts container">
@@ -69,7 +69,7 @@ function scrollToForm() {
         </div>
       </div>
     </div>
-    <app-btn class="about-ielts__footer-btn" href="#" @click="scrollToForm()"/>
+    <app-btn class="about-ielts__footer-btn" href="#" @click="handleButtonClick()"/>
   </div>
 
 </template>

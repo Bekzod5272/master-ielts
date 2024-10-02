@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVideoLinksEvenThree,dataVideoLinksEvenFive} from "@/constans/video-links";
+import {
+  dataVideoLinksFirst,
+  dataVideoLinksSecond,
+  dataVideoLinksEvenFour,
+  dataVideoLinksEvenThree,
+  dataVideoLinksEvenFive
+} from "@/constans/video-links";
 </script>
 <template>
   <div class="about-education-header main-container">
@@ -19,28 +25,38 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
     <div>
       <div class="grid-container">
         <div class="grid-container__first">
-          <div v-for="(item, index) in dataVideoLinksFirst" :key="index" class="grid-item-odd">
-            <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+          <div v-for="(item, index) in dataVideoLinksFirst" :key="index">
+            <a :href="item.url">
+              <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+            </a>
           </div>
         </div>
         <div class="grid-container__second">
-          <div v-for="(item, index) in dataVideoLinksSecond" :key="index" class="grid-item-odd">
-            <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+          <div v-for="(item, index) in dataVideoLinksSecond" :key="index">
+            <a :href="item.url">
+              <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+            </a>
           </div>
         </div>
         <div class="grid-container__three">
-          <div v-for="(item, index) in dataVideoLinksEvenThree" :key="index" class="grid-item-odd">
-            <img :src="item.path" :alt="'Image ' + (index + 1)"  class="img-fluid"/>
+          <div v-for="(item, index) in dataVideoLinksEvenThree" :key="index">
+            <a :href="item.url">
+              <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+            </a>
           </div>
         </div>
         <div class="grid-container__four">
-          <div v-for="(item, index) in dataVideoLinksEvenFour" :key="index" class="grid-item-odd">
-            <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+          <div v-for="(item, index) in dataVideoLinksEvenFour" :key="index">
+              <a :href="item.url">
+                <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+              </a>
           </div>
         </div>
         <div class="grid-container__five">
-          <div v-for="(item, index) in dataVideoLinksEvenFive" :key="index" class="grid-item-odd">
-            <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+          <div v-for="(item, index) in dataVideoLinksEvenFive" :key="index">
+            <a :href="item.url">
+              <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
+            </a>
           </div>
         </div>
       </div>
@@ -50,10 +66,13 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
 <style lang="scss" scoped>
 .about-education-header {
   width: 100%;
-  height: auto; 
+  height: auto;
   background-image: url("/public/images/soya.png");
+  padding: 20px;
   background-position: top;
   background-size: cover;
+  box-shadow: 1px 11px 127px 54px rgba(0,0,0,0.6),
+  0px 45px 26px 0px rgba(0,0,0,0.14);
 
   &__img {
     display: flex;
@@ -64,12 +83,15 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
     width: 800px;
   }
 }
-.about-education{
-  pointer-events: none;
+
+.about-education {
   background-image: url("/public/images/soya2.png");
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   background-size: cover;
   background-position: top;
+  margin-top: 50px;
 }
+
 .about-education-title {
   width: 70%;
   margin: 0 auto;
@@ -85,12 +107,15 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
   justify-content: center;
   overflow: hidden;
   gap: 10px;
-  margin-top: 50px;
   @media (max-width: 768px) {
+    padding: 0 20px;
     gap: 5px;
   }
-
-  img{
+  a{
+    display: block;
+    cursor: pointer;
+  }
+  img {
     width: 150px;
     height: 200px;
     border-radius: 16px;
@@ -102,8 +127,13 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
       border-radius: 12px;
     }
   }
+
 }
-.grid-container__first , .grid-container__three, .grid-container__five{
+.grid-container a {
+  pointer-events: auto;
+}
+
+.grid-container__first, .grid-container__three, .grid-container__five {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -117,7 +147,12 @@ import {dataVideoLinksFirst,dataVideoLinksSecond,dataVideoLinksEvenFour,dataVide
     height: 600px;
   }
 }
-.grid-container__second , .grid-container__four{
+.grid-container__five{
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.grid-container__second, .grid-container__four {
   display: flex;
   flex-direction: column;
   gap: 10px;

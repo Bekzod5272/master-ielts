@@ -7,9 +7,27 @@ import AboutEducation from "@/pages/AboutEducation.vue";
 import AuthPage from "@/pages/AuthPage.vue";
 import AppFooter from "@/pages/AppFooter.vue";
 import LocationMap from "@/pages/LocationMap.vue";
+import {nextTick, onMounted, ref} from 'vue';
+import eventBus from './constans/eventBus';
+import AuthForm from "@/components/AuthForm.vue";
 
+const authFormContainerRef = ref(null);
 
+function scrollToAuthPage() {
+  nextTick(() => {
+    if (authFormContainerRef.value) {
+      authFormContainerRef.value.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log("authPageRef.value is null");
+    }
+  });
+}
+
+onMounted(() => {
+  eventBus.on('scroll-to-auth', scrollToAuthPage);
+});
 </script>
+
 <template>
   <div class="main main-container">
     <main-info-page/>
@@ -19,7 +37,9 @@ import LocationMap from "@/pages/LocationMap.vue";
       <about-course/>
     </div>
     <about-education/>
-    <auth-page/>
+    <div class="container" ref="authFormContainerRef">
+      <auth-form />
+    </div>
     <location-map/>
     <app-footer/>
   </div>

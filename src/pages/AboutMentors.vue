@@ -1,13 +1,18 @@
 <script setup>
 import AppBtn from "@/components/AppBtn.vue";
+import eventBus from '@/constans/eventBus';
 
+function handleButtonClick() {
+  console.log('csc')
+  eventBus.emit('scroll-to-auth');
+}
 const mentors = [
-  {id: 1, name: 'Ismoil Xasanov', image: 'public/images/isroil.png'},
-  {id: 2, name: 'Zafar Tashlayev', image: 'public/images/abdullohs-image.png'},
-  {id: 3, name: 'Bexruz Sherali', image: 'public/images/isroil.png'},
-  {id: 4, name: 'Abdulloh Azimov', image: 'public/images/abdullohs-image.png'},
-  {id: 5, name: 'Abdulloh Yusupov', image: 'public/images/isroil.png'},
-  {id: 6, name: 'Sardor Qoziyev', image: 'public/images/abdullohs-image.png'},
+  {id: 1, name: 'Sherzod Mutalipov', image: 'public/images/sherzod.png'},
+  {id: 2, name: 'Sarvar Tolipov', image: 'public/images/sarvar.png'},
+  {id: 3, name: "Abdulloh Yusufxo'jayev", image: 'public/images/abdulloh.png'},
+  {id: 4, name: "Abdulloh Abdug'aniyev", image: 'public/images/r3.png'},
+  {id: 5, name: 'Bekzod Ziyatov', image: 'public/images/bekzod.png'},
+  {id: 6, name: 'Sardor Dadashev', image: 'public/images/sardor.png'},
 ]
 </script>
 <template>
@@ -22,7 +27,7 @@ const mentors = [
           <p class="mentors-section__information__info-text-italic">
             nima qilish kerak?
           </p>
-          <div class="mentors-section__information__btn">
+          <div class="mentors-section__information__btn" @click="handleButtonClick">
             <i class="fa-solid fa-user"/>
             <p>
               Ro’yxatdan o’tish kerak
@@ -102,7 +107,11 @@ const mentors = [
       gap: 5px;
       font-size: 18px;
       text-transform: uppercase;
-
+      cursor: pointer;
+      font-family: PLAY_REGULAR;
+      @media (max-width: 576px) {
+        font-size: 16px;
+      }
       i {
         width: 30px;
         height: 30px;
@@ -120,6 +129,13 @@ const mentors = [
       &__text {
         font-family: OFONT_RU_LAINYDAY;
         font-size: 40px;
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+        @media (max-width: 576px) {
+          font-size: 25px;
+          text-align: center;
+        }
       }
 
       &__eagle-image {
@@ -165,7 +181,7 @@ const mentors = [
 
 .mentors-about {
   display: grid;
-  grid-template-rows: 120px 120px 120px;
+  grid-template-rows: auto auto auto;
   grid-template-columns:  140px 140px;
   padding: 10px 30px 0 30px;
 }
@@ -176,11 +192,11 @@ const mentors = [
 
 .mentor-image {
   width: 100px;
-  object-fit: cover;
-  object-position: top center;
   height: 80px;
   border-radius: 10px;
   margin-bottom: 10px;
+  object-position: top;
+  object-fit: cover;
 }
 
 .mentors-about__name {

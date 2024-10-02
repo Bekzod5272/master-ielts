@@ -30,10 +30,10 @@
           <p class="footer__address__title">Адрес</p>
           <p>Ташкент, Узбекистан</p>
           <div class="footer__social">
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/masterielts27"><i class="fa-brands fa-telegram"></i></a>
+            <a href=https://www.facebook.com/masterielts.uz/><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ielts_masterielts"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCFSHwAgBxpZ6-g9bxrD5sjQ"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
       </div>

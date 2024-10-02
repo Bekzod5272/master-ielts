@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import AppBtn from "@/components/AppBtn.vue";
+
+import eventBus from '@/constans/eventBus';
+
+function handleButtonClick() {
+  console.log('csc')
+  eventBus.emit('scroll-to-auth');
+}
 </script>
 <template>
   <div class="master-ielts container">
@@ -8,16 +15,16 @@ import AppBtn from "@/components/AppBtn.vue";
     </div>
 
     <div class="master-ielts__content">
-       <h1 class="master-ielts__title">MASTER IELTS</h1>
-     <div class="master-ielts__content__text">
-       <p class="master-ielts__hide-name">Sherzod Mutalipov</p>
-       <div class="master-ielts__subtitle">Sherzod Mutalipov</div>
-       <p class="master-ielts__description">
-         Eng qisqa vaqtda <strong>IELTS</strong> ni qo'lga kiriting!
-       </p>
-     </div>
+      <h1 class="master-ielts__title">MASTER IELTS</h1>
+        <p class="master-ielts__hide-name">Sherzod Mutalipov</p>
+      <div class="master-ielts__content__text">
+        <div class="master-ielts__subtitle">Sherzod Mutalipov</div>
+        <p class="master-ielts__description">
+          Eng qisqa vaqtda <strong>IELTS</strong> ni qo'lga kiriting!
+        </p>
+      </div>
       <div class="master-ielts__content__call">
-        <app-btn class="master-ielts__content__call__btn"/>
+        <app-btn @click="handleButtonClick" class="master-ielts__content__call__btn"/>
         <p class="master-ielts__extra-text">
           Запишитесь на индивидуальную бесплатную стратегическую сессию к Ивану Максимову.
         </p>

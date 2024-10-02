@@ -25,7 +25,7 @@ function handleSubmit() {
 </script>
 
 <template>
-  <div class="auth-container" id="master-ielts-call">
+  <div class="auth-container">
     <img src="/public/images/master-ielts-word2.png" class="auth-img img-fluid"/>
     <div class="auth-section">
 

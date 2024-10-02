@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import EightIcon from "../../public/icons/EightIcon.vue";
-
 import {dataInfoIelts} from "@/constans";
 import AppBtn from "@/components/AppBtn.vue";
+
+import eventBus from '@/constans/eventBus';
+
+function handleButtonClick() {
+  eventBus.emit('scroll-to-auth');
+}
+
 </script>
 
 <template>
@@ -32,7 +37,7 @@ import AppBtn from "@/components/AppBtn.vue";
         </div>
       </div>
     </div>
-    <app-btn class="section__header-btn"/>
+    <app-btn @click="handleButtonClick"  class="section__header-btn"/>
 
   </div>
 </template>
@@ -49,7 +54,7 @@ import AppBtn from "@/components/AppBtn.vue";
 }
 .section__header-btn {
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -61,6 +66,9 @@ import AppBtn from "@/components/AppBtn.vue";
   font-family: GothamProBlack;
   @media (max-width: 768px) {
     margin-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    gap: 5px;
   }
 }
 
@@ -88,16 +96,19 @@ import AppBtn from "@/components/AppBtn.vue";
     font-size: 38px;
   }
   @media (max-width: 768px) {
+    font-size: 24px;
     &__icon {
       width: 200px;
       height: 200px;
     }
-    font-size: 25px;
   }
   @media (max-width: 578px) {
-    font-size: 20px;
+    font-size: 17px;
+    &__icon {
+      width: 150px;
+      height: 150px;
+    }
   }
-
 }
 .section__content__infos__text {
   margin: 20px 0 50px 0;
@@ -116,6 +127,10 @@ import AppBtn from "@/components/AppBtn.vue";
     position: absolute;
     top: 100px;
     left: -90px;
+  }
+  @media (max-width: 576px) {
+    width: 300px;
+    left: -50px;
   }
 }
 
