@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppBtn from "@/components/AppBtn.vue";
+import AppBtn from "@/workspace/AppBtn.vue";
 import {ref} from "vue";
 import axios from "axios";
 import {toast} from "vue3-toastify";
@@ -174,12 +174,6 @@ function handleSubmit() {
   font-size: 1em;
   border-radius: 5px;
   border: none;
-}
-
-.auth-form__button {
-  img {
-    width: 180px !important;
-  }
 }
 
 .auth-contact {

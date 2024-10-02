@@ -1,5 +1,5 @@
 import App from '@/App.vue'
-import MainInfoPage from "@/pages/MainInfoPage.vue";
+import MainInfoPage from "@/components/MainInfoPage.vue";
 
 const router = [
   {

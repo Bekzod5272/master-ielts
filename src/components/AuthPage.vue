@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import AuthForm from "@/components/AuthForm.vue";
+import AuthForm from "@/workspace/ContactUsForm.vue";
 </script>
 <template>
   <div class="container">

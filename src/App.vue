@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import MainInfoPage from '@/pages/MainInfoPage.vue'
-import InfoForIelts from "@/pages/InfoForIelts.vue";
-import AboutMentors from "@/pages/AboutMentors.vue";
-import AboutCourse from "@/pages/AboutCourse.vue";
-import AboutEducation from "@/pages/AboutEducation.vue";
-import AuthPage from "@/pages/AuthPage.vue";
-import AppFooter from "@/pages/AppFooter.vue";
-import LocationMap from "@/pages/LocationMap.vue";
+import MainInfoPage from '@/components/MainInfoPage.vue'
+import InfoForIelts from "@/components/InfoForIelts.vue";
+import AboutMentors from "@/components/AboutMentors.vue";
+import AboutCourse from "@/components/AboutCourse.vue";
+import AboutEducation from "@/components/AboutEducation.vue";
+import AuthPage from "@/components/AuthPage.vue";
+import AppFooter from "@/components/AppFooter.vue";
+import LocationMap from "@/components/LocationMap.vue";
 import {nextTick, onMounted, ref} from 'vue';
-import eventBus from './constans/eventBus';
-import AuthForm from "@/components/AuthForm.vue";
+import eventBus from '@/constants/eventBus';
+import AuthForm from "@/workspace/ContactUsForm.vue";
 
 const authFormContainerRef = ref(null);
 
@@ -71,7 +71,7 @@ onMounted(() => {
     z-index: 111;
   }
   @media (max-width: 576px) {
-    top: -250px;
+    top: -220px;
   }
 }
 

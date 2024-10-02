@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AppBtn from "@/components/AppBtn.vue";
+import AppBtn from "@/workspace/AppBtn.vue";
 
-import eventBus from '@/constans/eventBus';
+import eventBus from '@/constants/eventBus';
 
 function handleButtonClick() {
   console.log('csc')
@@ -34,4 +34,4 @@ function handleButtonClick() {
 </template>
 
 
-<style src="src/assets/assets.scss" lang="scss"/>
+<style src="../assets/main.scss" lang="scss"/>

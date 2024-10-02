@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import AppMap from "@/components/AppMap.vue";
+import AppMap from "@/workspace/AppMap.vue";
 </script>
 <style lang="scss">
 .main-container {
