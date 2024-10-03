@@ -56,32 +56,9 @@ onMounted(() => {
 
 .infos-for-ielts {
   position: relative;
-  top: -100px;
+  top: -500px;
   margin: 0 auto;
   z-index: 15;
-  @media (max-width: 1600px) {
-    top: -280px;
-  }
-  @media (max-width: 1275px) {
-    top: -300px;
-  }
-  @media (max-width: 1024px) {
-    top: -250px;
-  }
-  @media (max-width: 991px) {
-    top: -200px;
-  }
-  @media (max-width: 768px) {
-    width: 85%;
-    border-radius: 20px;
-    top: -160px;
-    position: relative;
-    bottom: 400px;
-    z-index: 111;
-  }
-  @media (max-width: 576px) {
-    top: -220px;
-  }
 }
 
 </style>

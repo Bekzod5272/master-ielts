@@ -59,6 +59,7 @@
   position: absolute;
   gap: 20px;
   left: 50%;
+  margin-top: 160px;
   transform: translateX(-50%);
   z-index: 1111;
   text-align: center;
@@ -96,7 +97,6 @@
   }
   .master-ielts__content__call {
     display: block;
-    margin-top: 30px;
     align-items: start;
   }
   .master-ielts__content__text {
@@ -143,7 +143,7 @@
     right: 65px;
   }
   .master-ielts__content__call {
-    margin-top: 70px;
+    margin-top: 220px;
 
     .master-ielts__extra-text {
       font-size: 13px;
@@ -169,7 +169,7 @@
     margin-top: 10px;
   }
   .master-ielts__content__call {
-    margin-top: 70px;
+    margin-top: 280px;
     flex-direction: column-reverse;
   }
   .master-ielts__extra-text {
@@ -391,6 +391,8 @@
 .swiper-pagination-bullets {
   margin-bottom: 20px !important;
 }
+//about-education.vue
+
 
 .about-education-header {
   width: 100%;
@@ -409,10 +411,8 @@
   }
 }
 
-//about-education.vue
 .about-education {
   background-image: url("/public/images/soya2.png");
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   background-size: cover;
   background-position: top;
   margin-top: 50px;
