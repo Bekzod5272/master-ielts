@@ -59,7 +59,6 @@
   position: absolute;
   gap: 20px;
   left: 50%;
-  margin-top: 150px;
   transform: translateX(-50%);
   z-index: 1111;
   text-align: center;
@@ -75,12 +74,6 @@
 .master-ielts__hide-name {
   display: none;
   font-family: PLAY_REGULAR;
-}
-
-@media (min-width: 1024px) {
-  .master-ielts__content__call {
-    margin-top: 90px;
-  }
 }
 
 @media (max-width: 991px) {

@@ -1,66 +1,9 @@
 <script setup lang="ts">
-import {
-  YandexMap,
-  YandexMapControls,
-  YandexMapDefaultFeaturesLayer,
-  YandexMapDefaultSchemeLayer,
-  YandexMapEntity,
-  YandexMapMarker,
-  YandexMapZoomControl,
-} from 'vue-yandex-maps';
-import {ref} from 'vue';
-
-const props = defineProps({
-  location: {
-    type: Array,
-    default: [69.228940, 41.295942],
-  },
-});
-const markersMap = [
-  {
-    coordinates: props.location,
-  },
-];
-
-const mapContainer = ref(null);
 </script>
 <template>
-  <yandex-map
-      :settings="{
-      location: {
-        center: props.location,
-        zoom: 15,
-      },
-    }"
-      @click.stop="openMarker = null"
-      height="50vh"
-      ref="mapContainer"
-  >
-    <yandex-map-default-scheme-layer/>
-    <yandex-map-default-features-layer/>
-    <yandex-map-controls :settings="{ position: 'right' }">
-      <yandex-map-zoom-control/>
-    </yandex-map-controls>
-    <yandex-map-marker
-        v-for="(marker, index) in markersMap"
-        :key="index"
-        :settings="{
-        coordinates: marker.coordinates,
-        onClick: () => (openMarker = index),
-        zIndex: openMarker === index ? 1 : 0,
-
-      }"
-    >
-      <div class="marker">
-        <i class="fa-sharp fa-solid fa-location-dot"></i>
-      </div>
-    </yandex-map-marker>
-  </yandex-map>
+  <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11982.06097671718!2d69.2045242!3d41.3411533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8d78121936af%3A0xf87d3ce9d0d2fd79!2sMaster%20Ielts!5e0!3m2!1sru!2s!4v1727708069442!5m2!1sru!2s"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
 </template>
 
-<style lang="scss">
-.marker i{
-  font-size: 30px;
-  color: red;
-}
-</style>
