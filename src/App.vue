@@ -59,6 +59,12 @@ onMounted(() => {
   top: -500px;
   margin: 0 auto;
   z-index: 15;
+  @media (max-width: 1600px) {
+    top: -300px;
+  }
+  @media (max-width: 991px) {
+    top: -200px;
+  }
 }
 
 </style>
