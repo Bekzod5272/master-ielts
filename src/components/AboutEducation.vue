@@ -9,20 +9,22 @@ import {
 </script>
 <template>
   <div class="about-education-header main-container">
-    <div class="about-education-header__img">
-      <img src="/public/images/master-ielts-word.png" class="img-fluid"/>
-    </div>
-    <div class="about-education-title">
-      <p>
-        Master IELTS — ingliz tilini o’rgatish bo’yicha 9 yildan ortiq tajribaga ega va maxsus Mutalipov
-        Sherzod tomonidan ishlab chiqilgan o’ziga xos metodikaga asoslanadi. Biz boshqa ta’lim markazlari singari
-        ishlamaymiz; har bir talabani individual ravishda o’rgatamiz va mavzularni chuqur tushuntiramiz, tariflardan
-        farqli o’laroq! Faqat sifat va natija.
-      </p>
-    </div>
+   <div class="container">
+     <div class="about-education-header__img">
+       <img src="/public/images/master-ielts-word.png" class="img-fluid"/>
+     </div>
+     <div class="about-education-title">
+       <p>
+         Master IELTS — ingliz tilini o’rgatish bo’yicha 9 yildan ortiq tajribaga ega va maxsus Mutalipov
+         Sherzod tomonidan ishlab chiqilgan o’ziga xos metodikaga asoslanadi. Biz boshqa ta’lim markazlari singari
+         ishlamaymiz; har bir talabani individual ravishda o’rgatamiz va mavzularni chuqur tushuntiramiz, tariflardan
+         farqli o’laroq! Faqat sifat va natija.
+       </p>
+     </div>
+   </div>
   </div>
   <div class="about-education main-container">
-    <div>
+    <div class="about-education__content">
       <div class="grid-container">
         <div class="grid-container__first">
           <div v-for="(item, index) in dataVideoLinksFirst" :key="index">
@@ -60,6 +62,7 @@ import {
           </div>
         </div>
       </div>
+      <img src="/public/images/master-ielts-natijalar.png" class="about-education__content__img img-fluid"/>
     </div>
   </div>
 </template>

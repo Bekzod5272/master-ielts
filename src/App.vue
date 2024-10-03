@@ -59,8 +59,17 @@ onMounted(() => {
   top: -100px;
   margin: 0 auto;
   z-index: 15;
+  @media (max-width: 1600px) {
+    top: -280px;
+  }
+  @media (max-width: 1275px) {
+    top: -300px;
+  }
+  @media (max-width: 1024px) {
+    top: -250px;
+  }
   @media (max-width: 991px) {
-    top: -220px;
+    top: -200px;
   }
   @media (max-width: 768px) {
     width: 85%;

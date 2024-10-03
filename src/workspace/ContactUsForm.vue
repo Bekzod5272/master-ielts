@@ -119,7 +119,7 @@ function handleSubmit() {
 .auth-left__subtitle {
   font-weight: 800;
   margin-bottom: 20px;
-  font-family: OFONT_RU_LAINYDAY;
+  font-family: GothamProMedium;
 }
 
 .auth-left__text {
