@@ -3,7 +3,7 @@
 .master-ielts {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 800px;
   overflow: hidden;
 }
 
@@ -59,7 +59,7 @@
   position: absolute;
   gap: 20px;
   left: 50%;
-  margin-top: 160px;
+  top: 50%;
   transform: translateX(-50%);
   z-index: 1111;
   text-align: center;
@@ -329,7 +329,7 @@
     z-index: 2;
     @media (max-width: 576px) {
       bottom: -20px;
-      .custom-button img{
+      .custom-button img {
         width: 80px;
       }
     }
@@ -389,42 +389,48 @@
 .swiper-pagination-bullets {
   margin-bottom: 20px !important;
 }
+
 //about-education.vue
 
 
-.about-education-header {
+.about-education-main {
   width: 100%;
   height: auto;
-  padding: 20px;
   background-position: top;
   background-size: cover;
+  position: relative;
 
   &__img {
-    display: flex;
-    justify-content: center;
-  }
-
-  img {
-    width: 800px;
+    width: fit-content;
+    margin: 0 auto;
+    img {
+      width: 800px
+    }
   }
 }
-
+.about-education-box{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: fit-content;
+  background: linear-gradient(150deg, transparent 0, black 100%);
+}
 .about-education {
-  background-image: url("/public/images/soya2.png");
   background-size: cover;
   background-position: top;
   margin-top: 50px;
 }
-.about-education__content{
-  position: relative;
+.about-education__content {
+
   &__img {
     position: absolute;
     width: 35%;
     left: 50%;
-    top: 70%;
+    top: 60%;
     transform: translateX(-50%);
   }
 }
+
 .about-education-title {
   width: 70%;
   margin: 0 auto;
@@ -435,23 +441,17 @@
 }
 
 .grid-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   overflow: hidden;
   gap: 10px;
-  @media (max-width: 768px) {
-    padding: 0 20px;
-    gap: 5px;
-  }
-  a {
-    display: block;
-    cursor: pointer;
-  }
 
   img {
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 350px;
     border-radius: 16px;
     object-fit: cover;
     @media (max-width: 768px) {
@@ -464,7 +464,6 @@
   }
 
 }
-
 .grid-container a {
   pointer-events: auto;
 }
@@ -473,7 +472,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 900px;
   overflow: hidden;
   @media (max-width: 768px) {
     height: 820px;
@@ -494,10 +492,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 900px;
+  height: 1605px;
   overflow: hidden;
+  top: -175px;
   position: relative;
-  top: -75px;
   @media (max-width: 881px) {
 
   }
@@ -838,7 +836,6 @@
 .section__content__header {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 20px;
   font-family: GothamProBlack;
   @media (max-width: 768px) {
@@ -852,7 +849,7 @@
 .section__content__infos {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 0 0 0 20px;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -864,10 +861,14 @@
   font-size: 55px;
   font-weight: 900;
   color: #424242;
+  margin-top: 5%;
 
   &__icon {
-    width: 300px;
-    height: 300px;
+    position: relative;
+    left: -15px;
+    transform: translateY(15%);
+    width: 260px;
+    height: 330px;
   }
 
   @media (max-width: 1024px) {
@@ -900,17 +901,19 @@
 }
 
 .section__content__infos__image {
-  width: 500px;
-  height: auto;
   @media (max-width: 768px) {
-    width: 400px;
     position: absolute;
+    width: 400px;
     top: 100px;
     left: -90px;
   }
   @media (max-width: 576px) {
     width: 300px;
     left: -50px;
+  }
+
+  img {
+    width: 600px;
   }
 }
 

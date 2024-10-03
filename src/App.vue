@@ -16,7 +16,7 @@ const authFormContainerRef = ref(null);
 function scrollToAuthPage() {
   nextTick(() => {
     if (authFormContainerRef.value) {
-      authFormContainerRef.value.scrollIntoView({ behavior: 'smooth' });
+      authFormContainerRef.value.scrollIntoView({behavior: 'smooth'});
     } else {
       console.log("authPageRef.value is null");
     }
@@ -36,10 +36,12 @@ onMounted(() => {
       <about-mentors/>
       <about-course/>
     </div>
-    <about-education/>
-    <div class="container" ref="authFormContainerRef">
-      <auth-form />
-    </div>
+    <about-education ref="authFormContainerRef">
+      <auth-form/>
+    </about-education>
+<!--    <div class="container" ref="authFormContainerRef">-->
+<!--      <auth-form/>-->
+<!--    </div>-->
     <location-map/>
     <app-footer/>
   </div>
@@ -50,21 +52,16 @@ onMounted(() => {
   height: 100%;
   background-image: url('public/images/bg2.png');
   background-size: cover;
-  background-position: top center;
+  background-position:top;
   position: relative;
 }
 
 .infos-for-ielts {
   position: relative;
-  top: -500px;
+  top: -10%;
+  transform: translateY(-10%);
   margin: 0 auto;
   z-index: 15;
-  @media (max-width: 1600px) {
-    top: -300px;
-  }
-  @media (max-width: 991px) {
-    top: -200px;
-  }
 }
 
 </style>
