@@ -22,7 +22,7 @@ function handleButtonClick() {
       </div>
       <div class="section__content__infos">
         <div class="section__content__infos__image">
-          <img src="/public/images/info-ielts-back.png" class="img-fluid">
+          <img src="/public/images/info-ielts-back.png">
         </div>
         <div class="section__content__infos__text">
           <ul class="info-list" >

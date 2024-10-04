@@ -93,6 +93,7 @@ function handleSubmit() {
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
   }
 }
 
@@ -119,7 +120,12 @@ function handleSubmit() {
 .auth-left__subtitle {
   font-weight: 800;
   margin-bottom: 20px;
-  font-family: GothamProMedium;
+  font-size: 50px;
+  font-family: cursive;
+  @media (max-width: 576px) {
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
 }
 
 .auth-left__text {
@@ -128,7 +134,12 @@ function handleSubmit() {
   font-size: 1.2em;
   margin-top: 30px;
   font-family: PLAY_REGULAR;
-
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+  @media (max-width: 576px) {
+    font-size: 0.8rem;
+  }
 }
 
 .auth-left-section__img {
@@ -183,14 +194,7 @@ function handleSubmit() {
   font-size: 15px;
   font-weight: inherit;
   font-family: GothamProMedium;
-}
 
-.auth-form__button {
-  img {
-    @media (max-width: 576px) {
-      width: 150px;
-    }
-  }
 }
 
 .auth-contact__social {
@@ -198,6 +202,20 @@ function handleSubmit() {
   align-items: center;
   gap: 10px;
 }
+
+  @media (max-width: 390px) {
+    .auth-form__button .custom-button img {
+      width: 100px;
+    }
+    .auth-contact__social {
+      font-size: 13px;
+      gap: 5px;
+    }
+    .auth-contact__phone p{
+      font-size: 12px;
+    }
+  }
+
 
 .auth-contact__social__icons {
   display: flex;
