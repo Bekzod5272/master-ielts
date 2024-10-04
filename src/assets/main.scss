@@ -21,14 +21,12 @@
 
 .master-ielts__content {
   width: 100%;
-  margin: 80px auto auto auto;
   color: white;
 }
 
 
 .master-ielts__title {
-  font-size: 160px;
-  font-weight: bold;
+  font-size: 200px;
   text-align: center;
   color: white;
   font-family: NORWESTER;
@@ -55,7 +53,7 @@
   position: absolute;
   gap: 20px;
   left: 50%;
-  top: 50%;
+  top: 60%;
   transform: translateX(-50%);
   z-index: 1111;
   text-align: center;
@@ -209,7 +207,7 @@
     top: 50%;
     transform: scale(1) translate(-50%, -50%);
   }
-  .master-ielts__title{
+  .master-ielts__title {
     margin-top: 40px;
     font-size: 90px;
   }
