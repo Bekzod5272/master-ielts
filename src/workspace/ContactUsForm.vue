@@ -185,6 +185,14 @@ function handleSubmit() {
   font-family: GothamProMedium;
 }
 
+.auth-form__button {
+  img {
+    @media (max-width: 576px) {
+      width: 150px;
+    }
+  }
+}
+
 .auth-contact__social {
   display: flex;
   align-items: center;

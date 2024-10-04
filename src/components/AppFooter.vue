@@ -4,7 +4,7 @@
   <div class="footer container">
     <div class="footer__container">
       <div class="footer__logo">
-        <img src="/public/images/master-ielts-word2.png" class="img-fluid" alt="master-ielts-word2"/>
+        <img src="/public/images/master-ielts-word2.png"  alt="master-ielts-word2"/>
       </div>
       <div class="footer__nav">
         <div>

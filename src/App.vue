@@ -36,14 +36,16 @@ onMounted(() => {
       <about-mentors/>
       <about-course/>
     </div>
-    <about-education ref="authFormContainerRef">
-      <auth-form/>
-    </about-education>
-<!--    <div class="container" ref="authFormContainerRef">-->
-<!--      <auth-form/>-->
-<!--    </div>-->
-    <location-map/>
-    <app-footer/>
+    <div class="main-info-education">
+      <about-education ref="authFormContainerRef">
+        <auth-form/>
+      </about-education>
+      <div class="container" ref="authFormContainerRef">
+        <auth-form/>
+      </div>
+      <location-map/>
+      <app-footer/>
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -62,6 +64,14 @@ onMounted(() => {
   transform: translateY(-10%);
   margin: 0 auto;
   z-index: 15;
+  @media (max-width: 576px) {
+    top: 0;
+    transform: translateY(0);
+  }
+}
+.main-info-education{
+  position: relative;
+  top: -200px;
 }
 
 </style>

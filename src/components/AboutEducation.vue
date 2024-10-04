@@ -10,7 +10,7 @@ import AuthForm from "@/workspace/ContactUsForm.vue";
 
 </script>
 <template>
-  <div class="about-education-main main-container">
+  <div class="about-education-main container">
     <div class="about-education-box">
         <div class="about-education-header">
           <div class="about-education-main__img">
@@ -25,7 +25,7 @@ import AuthForm from "@/workspace/ContactUsForm.vue";
             </p>
           </div>
         </div>
-      <div class="about-education">
+      <div class="about-education container">
         <div class="about-education__content">
           <span class="transparent_gradient"/>
 
@@ -71,7 +71,6 @@ import AuthForm from "@/workspace/ContactUsForm.vue";
           </div>
         </div>
       </div>
-      <auth-form class="container"/>
     </div>
   </div>
 </template>
