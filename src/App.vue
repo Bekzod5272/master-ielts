@@ -37,8 +37,7 @@ onMounted(() => {
       <about-course/>
     </div>
     <div class="main-info-education">
-      <about-education ref="authFormContainerRef">
-        <auth-form/>
+      <about-education>
       </about-education>
       <div class="container" ref="authFormContainerRef">
         <auth-form/>
@@ -64,9 +63,13 @@ onMounted(() => {
   transform: translateY(-10%);
   margin: 0 auto;
   z-index: 15;
-  @media (max-width: 576px) {
+  @media (max-width: 991px) {
     top: 0;
     transform: translateY(0);
+  }
+  @media (max-width: 430px) {
+    top: -5%;
+    transform: translateY(-5%);
   }
 }
 .main-info-education{
