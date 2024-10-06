@@ -22,7 +22,8 @@ function handleButtonClick() {
       </div>
       <div class="section__content__infos">
         <div class="section__content__infos__image">
-          <img src="/public/images/info-ielts-back.png">
+          <img class="section__content__infos__image__front" src="/public/images/info-ielts-back.png">
+          <div class="section__content__infos__image__back" />
         </div>
         <div class="section__content__infos__text">
           <ul class="info-list" >
@@ -42,4 +43,3 @@ function handleButtonClick() {
   </div>
 </template>
 
-<style lang="scss" src="/src/assets/main.scss"/>

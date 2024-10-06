@@ -28,7 +28,7 @@
         </div>
         <div class="footer__address">
           <p class="footer__address__title">Адрес</p>
-          <p>Ташкент, Узбекистан</p>
+          <p class="footer__address__region">Ташкент, Узбекистан</p>
           <div class="footer__social">
             <a href="https://t.me/masterielts27"><i class="fa-brands fa-telegram"></i></a>
             <a href=https://www.facebook.com/masterielts.uz/><i class="fa-brands fa-facebook"></i></a>
@@ -40,4 +40,3 @@
     </div>
   </div>
 </template>
-<style src="/src/assets/main.scss" lang="scss"/>

@@ -38,11 +38,14 @@ const mentors = [
       </div>
       <div class="mentors-section__view">
         <div class="mentors-header">
-          <h1 class="mentors-header__title">BIZNING MENTORLAR</h1>
+          <h1 class="mentors-header__title">
+            BIZNING
+            <br/>MENTORLAR
+          </h1>
         </div>
-        <div class="mentors-about">
-          <div class="mentors" v-for="mentor in mentors" :key="mentor.id">
-            <img :src="mentor.image" :alt="mentor.name" class="mentor-image"/>
+        <div class="mentors-list">
+          <div class="mentors-list__item" v-for="mentor in mentors" :key="mentor.id">
+            <img :src="mentor.image" :alt="mentor.name" class="mentors-list__item__image"/>
             <p class="mentors-about__name">{{ mentor.name }}</p>
           </div>
         </div>
@@ -55,4 +58,3 @@ const mentors = [
   </div>
 </template>
 
-<style src="/src/assets/main.scss" lang="scss"/>

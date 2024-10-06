@@ -73,4 +73,3 @@ const combinedArray = dataInfoCourseSecondPage.concat(dataInfoCourseFirstPage)
   </div>
 
 </template>
-<style lang="scss" src="src/assets/main.scss"/>

@@ -37,15 +37,17 @@ onMounted(() => {
       <about-course/>
     </div>
     <div class="main-info-education">
-      <about-education>
-      </about-education>
-      <div class="container" ref="authFormContainerRef">
-        <auth-form/>
+      <div class="main-info-education__contents">
+        <about-education/>
+        <div ref="authFormContainerRef">
+          <auth-form/>
+        </div>
       </div>
       <location-map/>
       <app-footer/>
     </div>
   </div>
+
 </template>
 <style lang="scss">
 .main {
@@ -53,14 +55,14 @@ onMounted(() => {
   height: 100%;
   background-image: url('public/images/bg2.png');
   background-size: cover;
-  background-position:top;
+  background-position: top;
   position: relative;
 }
 
 .infos-for-ielts {
   position: relative;
-  top: -10%;
-  transform: translateY(-10%);
+  top: -8%;
+  transform: translateY(-8%);
   margin: 0 auto;
   z-index: 15;
   @media (max-width: 991px) {
@@ -72,9 +74,26 @@ onMounted(() => {
     transform: translateY(-5%);
   }
 }
-.main-info-education{
+
+.main-info-education {
+  width: 100%;
   position: relative;
-  top: -200px;
+  top: -8%;
+  bottom: 0;
+  transform: translateY(-8%);
+  @media (max-width: 991px) {
+    top: -5%;
+    transform: translateY(-5%);
+  }
+  &__contents {
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.0) 0%,
+            rgba(0, 0, 0, 0.9) 20%,
+            rgba(0, 0, 0, 0.7) 80%,
+            rgba(0, 0, 0, 0.0) 100%
+    );
+  }
 }
 
 </style>

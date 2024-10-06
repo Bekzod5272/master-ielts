@@ -10,8 +10,8 @@ import AuthForm from "@/workspace/ContactUsForm.vue";
 
 </script>
 <template>
-  <div class="about-education-main container">
-    <div class="about-education-box">
+  <div class="about-education-main main-container">
+    <div class="about-education-box container">
         <div class="about-education-header">
           <div class="about-education-main__img">
             <img src="/public/images/master-ielts-word.png" class="img-fluid"/>
@@ -25,40 +25,39 @@ import AuthForm from "@/workspace/ContactUsForm.vue";
             </p>
           </div>
         </div>
-      <div class="about-education container">
+      <div class="about-education">
         <div class="about-education__content">
-          <span class="transparent_gradient"/>
 
           <div class="grid-container">
-            <div class="grid-container__first">
+            <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksFirst" :key="index">
                 <a :href="item.url">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
-            <div class="grid-container__second">
+            <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksSecond" :key="index">
                 <a :href="item.url">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
-            <div class="grid-container__three">
+            <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksEvenThree" :key="index">
                 <a :href="item.url">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
-            <div class="grid-container__four">
+            <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksEvenFour" :key="index">
                 <a :href="item.url">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
-            <div class="grid-container__five">
+            <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksEvenFive" :key="index">
                 <a :href="item.url">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
@@ -66,7 +65,7 @@ import AuthForm from "@/workspace/ContactUsForm.vue";
               </div>
             </div>
           </div>
-          <div class="transparent_gradient">
+          <div class="about-education__content__footer-img">
             <img src="/public/images/master-ielts-natijalar.png" class="about-education__content__img img-fluid"/>
           </div>
         </div>
@@ -74,4 +73,3 @@ import AuthForm from "@/workspace/ContactUsForm.vue";
     </div>
   </div>
 </template>
-<style lang="scss" src="/src/assets/main.scss"/>

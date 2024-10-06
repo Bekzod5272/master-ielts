@@ -31,6 +31,12 @@ const onSlideChange = (swiper: { activeIndex: number }) => {
           class="my-auto__slide"
       >
         <div class="course-list__item__content__info">
+          <div class="about-ielts__header" >
+            <div class="about-ielts__title">
+                BIZNING <br>
+                KURSLAR
+            </div>
+          </div>
           <h2 class="course-list__item-title">{{ item.btnText }}</h2>
           <p class="course-list__item-description">{{ item.text }}</p>
           <img :src="item.path" :alt="item.btnText" class="course-image"/>
@@ -39,3 +45,13 @@ const onSlideChange = (swiper: { activeIndex: number }) => {
     </swiper>
   </div>
 </template>
+<style scoped lang="scss">
+  .swiper {
+    .about-ielts__header {
+      margin-top: 30px;
+    }
+    .about-ielts__title{
+      font-size: 40px;
+    }
+  }
+</style>

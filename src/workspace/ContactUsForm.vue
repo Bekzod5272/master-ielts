@@ -25,7 +25,7 @@ function handleSubmit() {
 </script>
 
 <template>
-  <div class="auth-container">
+  <div class="auth-container container">
     <img src="/public/images/master-ielts-word2.png" class="auth-img img-fluid"/>
     <div class="auth-section">
 
@@ -82,7 +82,13 @@ function handleSubmit() {
 .auth-container {
   color: white;
   height: fit-content;
-  margin-top: 50px;
+  margin-bottom: 30px;
+  @media (max-width: 991px) {
+    margin-top: 50px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 150px;
+  }
 }
 
 .auth-section {
@@ -121,7 +127,7 @@ function handleSubmit() {
   font-weight: 800;
   margin-bottom: 20px;
   font-size: 50px;
-  font-family: cursive;
+  font-family: Segoe Print;
   @media (max-width: 576px) {
     margin-bottom: 10px;
     font-size: 35px;
@@ -133,7 +139,7 @@ function handleSubmit() {
   display: inline-block;
   font-size: 1.2em;
   margin-top: 30px;
-  font-family: PLAY_REGULAR;
+  font-family: Arial;
   @media (max-width: 768px) {
     margin-top: 0;
   }
@@ -203,18 +209,24 @@ function handleSubmit() {
   gap: 10px;
 }
 
-  @media (max-width: 390px) {
-    .auth-form__button .custom-button img {
-      width: 100px;
-    }
-    .auth-contact__social {
-      font-size: 13px;
-      gap: 5px;
-    }
-    .auth-contact__phone p{
-      font-size: 12px;
-    }
+@media (max-width: 576px) {
+  .auth-contact .custom-button img{
+    width: 150px;
   }
+}
+
+@media (max-width: 390px) {
+  .auth-contact .custom-button img{
+    width: 120px;
+  }
+  .auth-contact__social {
+    font-size: 13px;
+    gap: 5px;
+  }
+  .auth-contact__phone p {
+    font-size: 12px;
+  }
+}
 
 
 .auth-contact__social__icons {

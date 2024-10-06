@@ -13,8 +13,8 @@ function handleButtonClick() {
     <div class="master-ielts__image">
       <img src="/public/images/im2.png" alt="Person's image"/>
     </div>
-    <h1 class="master-ielts__title">MASTER IELTS</h1>
     <p class="master-ielts__hide-name">Sherzod Mutalipov</p>
+    <h1 class="master-ielts__title">MASTER IELTS</h1>
     <div class="master-ielts__content">
       <div class="master-ielts__content__text">
         <div class="master-ielts__subtitle">Sherzod Mutalipov</div>
