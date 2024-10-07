@@ -172,7 +172,6 @@
   .master-ielts__title {
     margin-top: 30px;
     font-size: 110px;
-    font-weight: 900;
   }
   .master-ielts__description {
     width: 140px;
@@ -245,10 +244,11 @@
 @media (max-width: 430px) {
   .master-ielts__hide-name {
     letter-spacing: 10px;
+    top: 50px;
   }
   .master-ielts__image img {
     top: 50%;
-    transform: scale(1) translate(-50%, -50%);
+    transform: scale(1.2) translate(-50%, -50%);
   }
   .master-ielts__title {
     margin-top: 50px;
