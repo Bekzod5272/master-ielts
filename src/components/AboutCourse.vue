@@ -23,14 +23,7 @@ const combinedArray = dataInfoCourseSecondPage.concat(dataInfoCourseFirstPage)
     <div class="about-ielts__courses">
       <div class="course-list">
         <div class="about-ielts__header">
-          <div class="about-ielts__title">
-            <p class="about-ielts__title__our">
-              BIZNING
-            </p>
-            <p class="about-ielts__title__course">
-              KURSLAR
-            </p>
-          </div>
+            <h2  class="about-ielts__title">BIZNING<br/><span>KURSLAR</span></h2>
         </div>
         <div class="course-list-left" v-for="items in dataInfoCourseFirstPage">
           <div class="course-list__item">

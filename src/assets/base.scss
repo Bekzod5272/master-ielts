@@ -497,11 +497,12 @@ template {
   src: url("/public/fonts/PLAY-BOLD.ttf");
   font-family: PLAY-BOLD;
 }
-@font-face {
-  src: url("/public/fonts/PLAY-REGULAR.ttf");
-  font-family: PLAY_REGULAR;
-}
+
 @font-face {
   src: url("/public/fonts/OFONT.RU_LAINYDAY.ttf");
   font-family: OFONT_RU_LAINYDAY;
+}
+@font-face {
+  src: url("/public/fonts/segoeprint_bold.ttf");
+  font-family: SEGOEPRINT;
 }

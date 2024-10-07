@@ -53,7 +53,7 @@ onMounted(() => {
 .main {
   width: 100%;
   height: 100%;
-  background-image: url('public/images/bg2.png');
+  background-image: url('/public/images/bg2.png');
   background-size: cover;
   background-position: top;
   position: relative;
@@ -61,13 +61,16 @@ onMounted(() => {
 
 .infos-for-ielts {
   position: relative;
-  top: -8%;
-  transform: translateY(-8%);
   margin: 0 auto;
   z-index: 15;
+  top: -8%;
+  transform: translateY(-8%);
   @media (max-width: 991px) {
-    top: 0;
-    transform: translateY(0);
+    top: -2%;
+    transform: translateY(-2%);
+  }
+  @media (max-width: 576px) {
+    padding: 0 30px;
   }
   @media (max-width: 430px) {
     top: -5%;
@@ -76,15 +79,8 @@ onMounted(() => {
 }
 
 .main-info-education {
-  width: 100%;
   position: relative;
-  top: -8%;
   bottom: 0;
-  transform: translateY(-8%);
-  @media (max-width: 991px) {
-    top: -5%;
-    transform: translateY(-5%);
-  }
   &__contents {
     background: linear-gradient(
             to bottom,
@@ -93,6 +89,15 @@ onMounted(() => {
             rgba(0, 0, 0, 0.7) 80%,
             rgba(0, 0, 0, 0.0) 100%
     );
+    @media (max-width: 991px) {
+      background: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.0) 0%,
+              rgba(0, 0, 0, 0.9) 20%,
+              rgba(0, 0, 0, 0.4) 80%,
+              rgba(0, 0, 0, 0.0) 100%
+      );
+    }
   }
 }
 

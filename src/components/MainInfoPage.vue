@@ -17,7 +17,7 @@ function handleButtonClick() {
     <h1 class="master-ielts__title">MASTER IELTS</h1>
     <div class="master-ielts__content">
       <div class="master-ielts__content__text">
-        <div class="master-ielts__subtitle">Sherzod Mutalipov</div>
+        <span class="master-ielts__subtitle">Sherzod Mutalipov</span>
         <p class="master-ielts__description">
           Eng qisqa vaqtda <strong>IELTS</strong> ni qo'lga kiriting!
         </p>
@@ -28,6 +28,7 @@ function handleButtonClick() {
       <p class="master-ielts__extra-text">
         Запишитесь на индивидуальную бесплатную стратегическую сессию к Ивану Максимову.
       </p>
+      <img src="/public/images/fon4.png" class="img-fluid master-ielts__content__call__img"/>
     </div>
   </div>
 </template>

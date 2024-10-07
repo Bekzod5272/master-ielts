@@ -8,12 +8,12 @@ function handleButtonClick() {
 }
 
 const mentors = [
-  {id: 1, name: 'Sherzod Mutalipov', image: 'public/images/sherzod.png'},
-  {id: 2, name: 'Sarvar Tolipov', image: 'public/images/sarvar.png'},
-  {id: 3, name: "Abdulloh Yusufxo'jayev", image: 'public/images/abdulloh.png'},
-  {id: 4, name: "Abdulloh Abdug'aniyev", image: 'public/images/r3.png'},
-  {id: 5, name: 'Bekzod Ziyatov', image: 'public/images/bekzod.png'},
-  {id: 6, name: 'Sardor Dadashev', image: 'public/images/sardor.png'},
+  {id: 1, name: 'Sherzod Mutalipov', image: '/public/images/sherzod.png'},
+  {id: 2, name: 'Sarvar Tolipov', image: '/public/images/sarvar.png'},
+  {id: 3, name: "Abdulloh Yusufxo'jayev", image: '/public/images/abdulloh.png'},
+  {id: 4, name: "Abdulloh Abdug'aniyev", image: '/public/images/r3.png'},
+  {id: 5, name: 'Bekzod Ziyatov', image: '/public/images/bekzod.png'},
+  {id: 6, name: 'Sardor Dadashev', image: '/public/images/sardor.png'},
 ]
 </script>
 <template>
@@ -45,7 +45,7 @@ const mentors = [
         </div>
         <div class="mentors-list">
           <div class="mentors-list__item" v-for="mentor in mentors" :key="mentor.id">
-            <img :src="mentor.image" :alt="mentor.name" class="mentors-list__item__image"/>
+            <img :src="mentor.image" :alt="mentor.name" class="mentors-list__item__image img-fluid"/>
             <p class="mentors-about__name">{{ mentor.name }}</p>
           </div>
         </div>

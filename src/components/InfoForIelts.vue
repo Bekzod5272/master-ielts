@@ -18,7 +18,7 @@ function handleButtonClick() {
           OLISH<br>UCHUN
         </p>
         <img src="/public/images/8+.png" class="section__content__header__title__icon img-fluid">
-        <p class="section__content__header__title">NIMA<br>QILISH<br>KERAK?</p>
+        <p class="section__content__header__title">NIMA QILISH <br> KERAK?</p>
       </div>
       <div class="section__content__infos">
         <div class="section__content__infos__image">

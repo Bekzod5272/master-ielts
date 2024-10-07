@@ -1,8 +1,8 @@
 export const dataVideoLinksFirst = [
     {
         id: 1,
-        path: '/public/images/shorts-video-images/img.png',
-        url: 'https://www.instagram.com/reel/C6Oss3GtggC/?igsh=NHRnN3c3ejM5MnRm',
+        path: '/public/images/shorts-video-images/img_1.png',
+        url: 'https://www.instagram.com/reel/C3DWv7Ot-7D/?igsh=bmJwbjhkaGJreDJh',
     },
     {
         id: 2,
@@ -24,18 +24,23 @@ export const dataVideoLinksFirst = [
 export const dataVideoLinksSecond = [
     {
         id: 5,
-        path: '/public/images/shorts-video-images/img_6.png',
-        url: 'https://instagram.com/master-ielts.uz/6',
+        path: '/public/images/shorts-video-images/img_5.png',
+        url: 'https://www.instagram.com/reel/C3DWv7Ot-7D/?igsh=bmJwbjhkaGJreDJh',
     },
     {
         id: 6,
+        path: '/public/images/shorts-video-images/img_6.png',
+        url: 'https://www.instagram.com/tv/CcaiXnDFT5h/?igsh=MXhybXRhOGdhZHViMA==',
+    },
+    {
+        id: 7,
         path: '/public/images/shorts-video-images/img_7.png',
-        url: 'https://instagram.com/master-ielts.uz/7',
+        url: 'https://www.instagram.com/reel/Cxx19Yttr6P/?igsh=MTB4M3QwajhicnZmMw==',
     },
     {
         id: 7,
         path: '/public/images/shorts-video-images/img_8.png',
-        url: 'https://instagram.com/master-ielts.uz/8',
+        url: 'https://www.instagram.com/reel/Cxx19Yttr6P/?igsh=MTB4M3QwajhicnZmMw==',
     },
     {
         id: 8,
@@ -45,19 +50,19 @@ export const dataVideoLinksSecond = [
     {
         id: 9,
         path: '/public/images/shorts-video-images/img_10.png',
-        url: 'https://instagram.com/master-ielts.uz/10',
+        url: 'https://instagram.com/tv/Ce9KkAklkg9',
     },
 ]
 export const dataVideoLinksEvenThree = [
     {
         id: 11,
         path: '/public/images/shorts-video-images/img_11.png',
-        url: 'https://www.instagram.com/reel/CzgruLGN4lT/?igsh=MTFyZTQ0ZDBycTF4eQ==',
+        url: 'https://www.instagram.com/reel/CzgruLGN4lT/?igsh=YWo4eG5vZzMxa2Z5',
     }
     , {
         id: 12,
         path: '/public/images/shorts-video-images/img_12.png',
-        url: '',
+        url: 'https://www.instagram.com/reel/C6Oss3GtggC/?igsh=MXBkZ2ZidjlibXZvNw==',
     },
     {
         id: 13,
@@ -92,30 +97,30 @@ export const dataVideoLinksEvenFour = [
         url: 'https://www.instagram.com/reel/CjA_RQUOXij/?igsh=MTA0a25mMmNzNDAyag==',
     },
     {
-        id: 19,
-        path: '/public/images/shorts-video-images/img_19.png',
-        url: '/',
+        id: 23,
+        path: '/public/images/shorts-video-images/img_23.png',
+        url: 'https://www.instagram.com/reel/C1HqQC9NEuD/?igsh=MTA3cmlhZHFtM3p0YQ==',
     },
 ]
 export const  dataVideoLinksEvenFive =[
     {
         id: 20,
         path: '/public/images/shorts-video-images/img_20.png',
-        url: 'https://instagram.com/master-ielts.uz/1',
+        url: 'https://www.instagram.com/reel/C1HqQC9NEuD/?igsh=MTA3cmlhZHFtM3p0YQ==',
     },
     {
         id: 21,
         path: '/public/images/shorts-video-images/img_21.png',
-        url: 'https://www.instagram.com/reel/C1HqQC9NEuD/?igsh=MTA3cmlhZHFtM3p0YQ==',
+        url: 'https://www.instagram.com/reel/C1HqQC9NEuD/?igsh=eXRkbncxM2YxemNj',
     },
     {
-        id: 22,
-        path: '/public/images/shorts-video-images/img_22.png',
-        url: 'https://www.instagram.com/reel/Chpb9V7F6L1/?igsh=MmV3cXpyanM4dGhqhttps://www.instagram.com/reel/Chpb9V7F6L1/?igsh=MmV3cXpyanM4dGhq',
+        id: 9,
+        path: '/public/images/shorts-video-images/img_10.png',
+        url: 'https://www.instagram.com/tv/Ce9KkAklkg9/?igsh=aHBramZ5dmtjdHF3',
     },
     {
         id: 23,
         path: '/public/images/shorts-video-images/img_24.png',
-        url: 'https://www.instagram.com/reel/C7wgxytNE8p/?igsh=MTQxY3V6cDFhOXo3OA==',
+        url: 'https://www.instagram.com/reel/C1HqQC9NEuD/?igsh=eXRkbncxM2YxemNj',
     },
 ]
