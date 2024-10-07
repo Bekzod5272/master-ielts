@@ -320,6 +320,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 40px;
     @media (max-width: 991px) {
       gap: 50px;
     }
@@ -329,7 +330,7 @@
   }
 
   .course-list {
-    width: 45%;
+    width: 40%;
     height: fit-content;
     padding: 30px 20px;
     position: sticky;
@@ -347,6 +348,7 @@
           display: flex;
           flex-direction: column;
           height: fit-content;
+          margin-bottom: 10px;
           @media (max-width: 768px) {
             justify-content: center;
             padding: 20px;
@@ -576,6 +578,7 @@
     left: 0;
     right: 0;
     top: 0;
+    pointer-events: none;
     z-index: 21;
     height: 300px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(11, 9, 9, 0));
@@ -588,6 +591,7 @@
     right: 0;
     bottom: 175px;
     height: 300px;
+    pointer-events: none;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(11, 9, 9, 0));
     @media (max-width: 768px) {
       bottom: 90px;
@@ -599,15 +603,12 @@
 }
 
 .grid-container__column div {
-  width: 250px;
+  width: 100%;
   height: 350px;
-  border-radius: 16px;
   @media (max-width: 768px) {
-    width: 200px;
     height: 250px;
   }
   @media (max-width: 576px) {
-    width: 150px;
     height: 200px;
     border-radius: 8px;
   }
@@ -615,7 +616,7 @@
   img {
     width: 100%;
     height: 100%;
-
+    border-radius: 16px;
   }
 }
 
@@ -779,7 +780,7 @@
       }
 
       &__eagle-image {
-        width: 550px;
+        width: 500px;
         position: absolute;
         top: 100px;
         left: 42%;
@@ -926,10 +927,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
-  padding: 40px;
-  @media (max-width: 768px) {
-    padding: 20px;
-  }
 }
 
 .footer__logo {
@@ -1128,7 +1125,9 @@
   top: -100px;
   left: -35px;
   z-index: 2;
-
+  @media (min-width: 1400px) {
+    left: 60px;
+  }
   img {
     width: 650px;
   }
@@ -1195,7 +1194,9 @@
   @media (max-width: 768px) {
     font-family: PLAY-BOLD;
   }
-
+@media (max-width: 576px) {
+  font-size: 14px;
+}
   i {
     color: #0C21AE;
   }
@@ -1203,6 +1204,9 @@
 
 .info-list__highlight {
   position: relative;
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 }
 
 .info-list__highlight::after {

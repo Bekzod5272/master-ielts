@@ -18,7 +18,7 @@
       width: 180px;
     }
     @media (max-width: 576px) {
-      width: 120px;
+      width: 150px;
     }
   }
 }

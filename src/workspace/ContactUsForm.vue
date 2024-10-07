@@ -83,7 +83,6 @@ function handleSubmit() {
   color: white;
   height: fit-content;
   margin-bottom: 30px;
-  padding: 40px;
   @media (max-width: 991px) {
     margin-top: 50px;
   }
