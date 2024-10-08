@@ -90,6 +90,10 @@ function handleSubmit() {
     margin-top: 150px;
     padding: 30px;
   }
+  @media (max-width: 576px) {
+    margin-top: 10px;
+    padding: 50px;
+  }
 }
 
 .auth-section {
