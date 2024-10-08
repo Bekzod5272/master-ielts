@@ -262,7 +262,7 @@
     margin-top: 75px;
     font-size: 90px;
   }
-  .master-ielts__hide-name{
+  .master-ielts__hide-name {
     top: 50px;
   }
   .master-ielts__content__call {
@@ -277,7 +277,7 @@
 }
 
 @media (max-width: 400px) {
-  .master-ielts__description{
+  .master-ielts__description {
     margin-left: 25px;
   }
   .master-ielts__subtitle {
@@ -296,7 +296,7 @@
   .master-ielts__subtitle {
     left: 10px;
   }
-  .master-ielts__description{
+  .master-ielts__description {
     margin-left: 15px;
   }
 }
@@ -644,6 +644,9 @@
     width: 100%;
     height: 100%;
     border-radius: 16px;
+    @media (max-width: 767px) {
+      object-fit: cover;
+    }
     @media (max-width: 576px) {
       border-radius: 4px;
     }
