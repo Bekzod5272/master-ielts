@@ -186,6 +186,9 @@ function handleSubmit() {
   margin-bottom: 30px;
   input {
     font-family: GothamProMedium;
+    @media (max-width: 576px) {
+      font-size: 9px !important;
+    }
   }
 }
 
