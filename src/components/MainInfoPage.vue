@@ -28,7 +28,7 @@ function handleButtonClick() {
       <p class="master-ielts__extra-text">
         Запишитесь на индивидуальную бесплатную стратегическую сессию к Ивану Максимову.
       </p>
-      <img src="/public/images/fon4.png" class="img-fluid master-ielts__content__call__img"/>
+      <img src="/public/images/fon4.png" class="master-ielts__content__call__img img-fluid"/>
     </div>
   </div>
 </template>

@@ -88,7 +88,7 @@ function handleSubmit() {
   }
   @media (max-width: 768px) {
     margin-top: 150px;
-    padding: 20px;
+    padding: 30px;
   }
 }
 
@@ -130,6 +130,7 @@ function handleSubmit() {
   font-size: 50px;
   font-family: SEGOEPRINT;
   @media (max-width: 576px) {
+    font-family: GothamProMedium;
     margin-bottom: 10px;
     font-size: 35px;
   }
@@ -183,6 +184,9 @@ function handleSubmit() {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 30px;
+  input {
+    font-family: GothamProMedium;
+  }
 }
 
 .auth-form__input {
