@@ -92,7 +92,6 @@ function handleSubmit() {
   }
   @media (max-width: 576px) {
     margin-top: 10px;
-    padding: 50px;
   }
 }
 
