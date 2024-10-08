@@ -153,10 +153,11 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .master-ielts__hide-name {
     position: absolute;
     width: 100%;
+    top: 50px;
     letter-spacing: 15px;
     text-transform: uppercase;
     color: white;
@@ -170,8 +171,9 @@
     transform: rotate(-90deg);
   }
   .master-ielts__title {
-    margin-top: 30px;
+    margin-top: 75px;
     font-size: 110px;
+    line-height: 0.9;
   }
   .master-ielts__description {
     width: 150px;
@@ -257,8 +259,11 @@
     transform: scale(1.2) translate(-50%, -50%);
   }
   .master-ielts__title {
-    margin-top: 50px;
+    margin-top: 75px;
     font-size: 90px;
+  }
+  .master-ielts__hide-name{
+    top: 50px;
   }
   .master-ielts__content__call {
     margin-top: 50px;
