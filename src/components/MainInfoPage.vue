@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppBtn from "@/workspace/AppBtn.vue";
+import AppBtn from "@/components/UI/AppBtn.vue";
 
 import eventBus from '@/constants/eventBus';
 

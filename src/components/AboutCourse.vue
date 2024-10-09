@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {dataInfoCourseFirstPage} from "../constants/index";
 import {dataInfoCourseSecondPage} from "../constants/index"
-import AppBtn from "@/workspace/AppBtn.vue";
+import AppBtn from "@/components/UI/AppBtn.vue";
 import 'swiper/swiper-bundle.min.css';
-import AppSwiper from "@/workspace/AppSwiper.vue";
+import AppSwiper from "@/components/UI/AppSwiper.vue";
 import eventBus from '@/constants/eventBus';
 
 function handleButtonClick() {

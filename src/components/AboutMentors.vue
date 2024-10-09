@@ -1,5 +1,5 @@
 <script setup>
-import AppBtn from "@/workspace/AppBtn.vue";
+import AppBtn from "@/components/UI/AppBtn.vue";
 import eventBus from '@/constants/eventBus';
 
 function handleButtonClick() {
@@ -21,7 +21,7 @@ const mentors = [
     <div class="mentors-section__content">
       <div class="mentors-section__information">
         <div class="mentors-section__information__content">
-          <img src="/public/images/7+.png" class="mentors-section__information__img img-fluid">
+          <img src="/public/images/7+.webp" class="mentors-section__information__img img-fluid">
           <p class="mentors-section__information__info-text">
             OLISH<br>UCHUN
           </p>

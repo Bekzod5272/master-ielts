@@ -93,6 +93,8 @@
   align-items: center;
   font-size: 17px;
   color: #111;
+  position: relative;
+  z-index: 11;
   font-family: GothamProMedium;
 }
 
@@ -1067,7 +1069,7 @@
 //info-for-ielts.vue
 
 .section {
-  background-image: url('/public/images/+111.png');
+  background-image: url('/public/images/+111.webp');
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;

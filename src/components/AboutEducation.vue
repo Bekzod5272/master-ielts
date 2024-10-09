@@ -6,7 +6,7 @@ import {
   dataVideoLinksEvenThree,
   dataVideoLinksEvenFive
 } from "@/constants/video-links";
-import AuthForm from "@/workspace/ContactUsForm.vue";
+import AuthForm from "@/components/UI/ContactUsForm.vue";
 
 </script>
 <template>

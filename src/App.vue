@@ -4,12 +4,11 @@ import InfoForIelts from "@/components/InfoForIelts.vue";
 import AboutMentors from "@/components/AboutMentors.vue";
 import AboutCourse from "@/components/AboutCourse.vue";
 import AboutEducation from "@/components/AboutEducation.vue";
-import AuthPage from "@/components/AuthPage.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import LocationMap from "@/components/LocationMap.vue";
 import {nextTick, onMounted, ref} from 'vue';
 import eventBus from '@/constants/eventBus';
-import AuthForm from "@/workspace/ContactUsForm.vue";
+import ContactUsForm from "@/components/UI/ContactUsForm.vue";
 
 const authFormContainerRef = ref(null);
 
@@ -40,7 +39,7 @@ onMounted(() => {
       <div class="main-info-education__contents">
         <about-education/>
         <div ref="authFormContainerRef">
-          <auth-form/>
+          <contact-us-form/>
         </div>
       </div>
       <location-map/>
@@ -53,7 +52,7 @@ onMounted(() => {
 .main {
   width: 100%;
   height: 100%;
-  background-image: url('/public/images/bg2.png');
+  background-image: url('/images/bg2.webp');
   background-size: cover;
   background-position: top;
   position: relative;
@@ -81,6 +80,7 @@ onMounted(() => {
 .main-info-education {
   position: relative;
   bottom: 0;
+
   &__contents {
     background: linear-gradient(
             to bottom,
