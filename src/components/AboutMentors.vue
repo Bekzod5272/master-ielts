@@ -8,12 +8,12 @@ function handleButtonClick() {
 }
 
 const mentors = [
-  {id: 1, name: 'Sherzod Mutalipov', image: '/images/sherzod.png'},
-  {id: 2, name: 'Sarvar Tolipov', image: '/images/sarvar.png'},
-  {id: 3, name: "Abdulloh Yusufxo'jayev", image: '/images/abdulloh.png'},
-  {id: 4, name: "Abdulloh Abdug'aniyev", image: '/images/r3.png'},
-  {id: 5, name: 'Bekzod Ziyatov', image: '/images/bekzod.png'},
-  {id: 6, name: 'Sardor Dadashev', image: '/images/sardor.png'},
+  {id: 1, name: 'Sherzod Mutalipov', image: '/images/sherzod.webp'},
+  {id: 2, name: 'Sarvar Tolipov', image: '/images/sarvar.webp'},
+  {id: 3, name: "Abdulloh Yusufxo'jayev", image: '/images/abdulloh.webp'},
+  {id: 4, name: "Abdulloh Abdug'aniyev", image: '/images/r3.webp'},
+  {id: 5, name: 'Bekzod Ziyatov', image: '/images/bekzod.webp'},
+  {id: 6, name: 'Sardor Dadashev', image: '/images/sardor.webp'},
 ]
 </script>
 <template>
@@ -49,11 +49,11 @@ const mentors = [
             <p class="mentors-about__name">{{ mentor.name }}</p>
           </div>
         </div>
-        <p class="mentors-section__information__footer__text">natijaga birinchi qadam</p>
       </div>
     </div>
+        <p class="mentors-section__information__footer__text">natijaga birinchi qadam</p>
     <div class="mentors-section__information__footer">
-      <img src="/public/images/eagle.png" class="mentors-section__information__footer__eagle-image img-fluid">
+      <img src="/public/images/eagle.webp" class="mentors-section__information__footer__eagle-image img-fluid">
     </div>
   </div>
 </template>

@@ -14,7 +14,7 @@ import AuthForm from "@/components/UI/ContactUsForm.vue";
     <div class="about-education-box container">
         <div class="about-education-header">
           <div class="about-education-main__img">
-            <img src="/public/images/master-ielts-word.png" class="img-fluid"/>
+            <img src="/public/images/master-ielts-word.webp" class="img-fluid"/>
           </div>
           <div class="about-education-title">
             <p>
@@ -66,7 +66,7 @@ import AuthForm from "@/components/UI/ContactUsForm.vue";
             </div>
           </div>
           <div class="about-education__content__footer-img">
-            <img src="/public/images/master-ielts-natijalar.png" class="about-education__content__img img-fluid"/>
+            <img src="/public/images/master-ielts-natijalar.webp" class="about-education__content__img img-fluid"/>
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ const combinedArray = dataInfoCourseSecondPage.concat(dataInfoCourseFirstPage)
           </div>
         </div>
         <div class="course-list-right__footer">
-          <img src="/public/images/about-ielts-back.png" class="img-fluid"/>
+          <img src="/public/images/about-ielts-back.webp" class="img-fluid"/>
         </div>
       </div>
     </div>

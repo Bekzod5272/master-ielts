@@ -26,7 +26,7 @@ function handleSubmit() {
 
 <template>
   <div class="auth-container container">
-    <img src="/public/images/master-ielts-word2.png" class="auth-img img-fluid"/>
+    <img src="/images/master-ielts-word.webp" class="auth-img img-fluid"/>
     <div class="auth-section">
 
       <div class="auth-left">
@@ -37,7 +37,7 @@ function handleSubmit() {
           </p>
         </div>
         <div class="auth-left-section__img">
-          <img src="/public/images/strelka.png" class="auth-left-img"/>
+          <img src="/public/images/strelka.webp" class="auth-left-img"/>
         </div>
       </div>
 
@@ -66,8 +66,8 @@ function handleSubmit() {
               <span class="social-text">ielts_masterielts</span>
             </div>
             <div class="auth-contact__phone">
-              <p>+998 99 866 44 44</p>
-              <p>+998 91 777 77 33</p>
+              <p>+99890 822 22 28 <br>Yunusobod</p>
+              <p>+99891 777 77 33 <br>Novza</p>
             </div>
           </div>
 

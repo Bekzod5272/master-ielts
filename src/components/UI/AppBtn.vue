@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="custom-button">
-    <img src="/public/images/knopka.png">
+    <img src="/public/images/knopka.webp">
   </div>
 </template>
 
