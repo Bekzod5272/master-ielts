@@ -2,26 +2,37 @@
 import AppBtn from "@/components/UI/AppBtn.vue";
 import {ref} from "vue";
 import axios from "axios";
-import {toast} from "vue3-toastify";
-
 
 const name = ref('')
 const phoneNumber = ref('')
+const nameError = ref('')
+const phoneError = ref('')
 
 function handleSubmit() {
-  if (!name.value || !phoneNumber.value) return toast.error("Iltimos ismingiz va raqamingizni kiriting kiriting",
-      {
-        position: 'bottom-center',
+  nameError.value = '';
+  phoneError.value = '';
+
+  if (!name.value) {
+    nameError.value = "Iltimos ismingizni kiriting";
+  }
+  if (!phoneNumber.value) {
+    phoneError.value = "Iltimos telefon raqamingizni kiriting";
+  }
+  if (!name.value && !phoneNumber.value) {
+    nameError.value = "Iltimos ismingizni kiriting";
+  }
+  if (!nameError.value && !phoneError.value) {
+    axios.get('https://api.telegram.org/bot7912836970:AAEi1lJACzuHlfkleVrkQoHDlOkJHwRx_LY/sendMessage', {
+      params: {
+        chat_id: 5630347243,
+        text: `Ism: ${name.value} \n\nTelefon raqami: ${phoneNumber.value}`,
+        parse_mode: 'Markdown'
       }
-  )
-  axios.get('https://api.telegram.org/bot7912836970:AAEi1lJACzuHlfkleVrkQoHDlOkJHwRx_LY/sendMessage', {
-    params: {
-      chat_id: 5630347243,
-      text: `Ism:${name.value} \n\nTelefon raqami:${phoneNumber.value}`,
-      parse_mode: 'Markdown'
-    }
-  }).then(() => toast.success("Ma'lumotlaringiz qabul qilingi", {position: 'bottom-center'}))
+    }).then(() => alert("Ma'lumotlaringiz qabul qilindi!"))
+        .catch(error => console.error("Xatolik yuz berdi:", error));
+  }
 }
+
 </script>
 
 <template>
@@ -43,9 +54,23 @@ function handleSubmit() {
 
       <div class="auth-right">
         <div class="auth-form">
-          <input type="text" placeholder="Ismingiz" v-model="name" class="auth-form__input form-control"/>
-          <input type="text" placeholder="Telefon raqamingiz" v-model="phoneNumber"
-                 class="auth-form__input form-control"/>
+          <input
+              type="text"
+              placeholder="Ismingiz"
+              v-model="name"
+              class="auth-form__input form-control"
+              :class="{'error':nameError}"
+          />
+          <span v-if="nameError" class="error-msg">{{ nameError }}</span>
+
+          <input
+              type="text"
+              placeholder="Telefon raqamingiz"
+              v-model="phoneNumber"
+              class="auth-form__input form-control"
+              :class="{'error':phoneError}"
+          />
+          <span v-if="phoneError" class="error-msg">{{ phoneError }}</span>
         </div>
 
         <div class="auth-contact">
@@ -187,11 +212,13 @@ function handleSubmit() {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 30px;
+
   input {
     font-family: GothamProMedium;
     @media (max-width: 576px) {
       font-size: 9px !important;
     }
+
   }
 }
 
@@ -201,7 +228,10 @@ function handleSubmit() {
   margin-bottom: 20px;
   font-size: 1em;
   border-radius: 5px;
-  border: none;
+}
+
+.auth-form__input.error {
+  border: 2px solid red;
 }
 
 .auth-contact {
@@ -221,13 +251,13 @@ function handleSubmit() {
 }
 
 @media (max-width: 576px) {
-  .auth-contact .custom-button img{
+  .auth-contact .custom-button img {
     width: 150px;
   }
 }
 
 @media (max-width: 390px) {
-  .auth-contact .custom-button img{
+  .auth-contact .custom-button img {
     width: 120px;
   }
   .auth-contact__social {
@@ -251,5 +281,11 @@ function handleSubmit() {
 
 .auth-contact__phone p {
   margin: 5px 0;
+}
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 </style>

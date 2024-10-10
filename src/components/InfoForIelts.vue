@@ -22,11 +22,13 @@ function handleButtonClick() {
       </div>
       <div class="section__content__infos">
         <div class="section__content__infos__image">
-          <img class="section__content__infos__image__front" src="/public/images/info-ielts-back.png">
-          <div class="section__content__infos__image__back" />
+          <a href="https://www.instagram.com/reel/C_0igayNPx8/?igsh=eHI5emF2cmVubW9t" target="_blank">
+            <img class="section__content__infos__image__front" src="/public/images/team.webp">
+          </a>
+          <div class="section__content__infos__image__back"/>
         </div>
         <div class="section__content__infos__text">
-          <ul class="info-list" >
+          <ul class="info-list">
             <li class="info-list__item" v-for="items in dataInfoIelts">
               <i :class="items.iconClass"></i>
               <div>
@@ -38,7 +40,7 @@ function handleButtonClick() {
         </div>
       </div>
     </div>
-    <app-btn @click="handleButtonClick"  class="section__header-btn"/>
+    <app-btn @click="handleButtonClick" class="section__header-btn"/>
 
   </div>
 </template>

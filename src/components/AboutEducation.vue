@@ -31,35 +31,35 @@ import AuthForm from "@/components/UI/ContactUsForm.vue";
           <div class="grid-container">
             <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksFirst" :key="index">
-                <a :href="item.url">
+                <a :href="item.url" target="_blank">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
             <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksSecond" :key="index">
-                <a :href="item.url">
+                <a :href="item.url" target="_blank">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
             <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksEvenThree" :key="index">
-                <a :href="item.url">
+                <a :href="item.url" target="_blank">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
             <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksEvenFour" :key="index">
-                <a :href="item.url">
+                <a :href="item.url" target="_blank">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>
             </div>
             <div class="grid-container__column">
               <div v-for="(item, index) in dataVideoLinksEvenFive" :key="index">
-                <a :href="item.url">
+                <a :href="item.url" target="_blank">
                   <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
                 </a>
               </div>

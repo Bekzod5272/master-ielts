@@ -349,10 +349,13 @@
   &__courses {
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding-bottom: 40px;
+    padding: 40px;
+    @media (max-width: 1200px) {
+      padding: 10px 0;
+    }
     @media (max-width: 991px) {
       gap: 50px;
+      padding: 30px 10px;
     }
     @media (max-width: 768px) {
       display: none;
@@ -360,7 +363,7 @@
   }
 
   .course-list {
-    width: 40%;
+    width: 45%;
     height: fit-content;
     padding: 30px 20px;
     position: sticky;
@@ -369,6 +372,7 @@
     @media (max-width: 991px) {
       padding: 20px 0 0 0;
     }
+
     &__item {
       &__content {
         display: flex;
@@ -427,7 +431,7 @@
       font-family: "Segoe Print";
       clip-path: polygon(0% 10%, 100% -4%, 100% 97%, 0 100%);
       @media (max-width: 991px) {
-        font-size: 12px;
+        font-size: 11px;
         clip-path: polygon(0% 10%, 100% -65%, 100% 97%, 0 100%);
       }
       @media (max-width: 768px) {
@@ -471,7 +475,7 @@
   position: sticky;
   z-index: 2;
   margin-top: 25px;
-  margin-left: 50px;
+  margin-left: auto;
   @media (max-width: 991px) {
     margin-left: 0;
     padding: 20px 0 0 0;
@@ -839,7 +843,7 @@
       &__eagle-image {
         width: 500px;
         position: absolute;
-        top: 100px;
+        top: 120px;
         left: 42%;
         transform: translateX(-42%);
 
@@ -1121,9 +1125,6 @@
   @media (max-width: 991px) {
     gap: 10px;
   }
-  @media (max-width: 768px) {
-    margin-bottom: 100px;
-  }
   @media (max-width: 576px) {
     justify-content: space-around;
     gap: 5px;
@@ -1172,92 +1173,102 @@
 }
 
 .section__content__infos__text {
-  width: 350px;
+  width: 40%;
   font-size: 18px;
-  margin-left: 150px;
-  @media (max-width: 1400px) {
-    margin-left: 100px;
-  }
-  @media (max-width: 1200px) {
-    margin-left: 0;
-  }
+  margin-left: auto;
+
   @media (max-width: 991px) {
-    width: 300px;
-    font-size: 16px;
+    font-size: 14px;
   }
   @media (max-width: 768px) {
-    margin: 90px auto 50px auto;
+    margin: 0 auto 50px auto;
     width: 80%;
     display: flex;
     justify-content: center;
   }
   @media (max-width: 576px) {
     width: 90%;
-    margin: 50px auto 35px auto;
-    padding: 20px;
   }
-  @media (max-width: 450px) {
-    padding: 0;
-  }
+
 }
 
 .section__content__infos__image {
+  width: 50%;
+  height: 400px;
   position: relative;
-  top: -100px;
-  left: 140px;
   z-index: 2;
-
-  img {
-    width: 650px;
-  }
-
-  @media (max-width: 1400px) {
-    left: 50px;
-  }
-  @media (max-width: 1200px) {
-    left: -30px;
+  pointer-events: auto;
+  a{
+    cursor: pointer;
   }
   @media (max-width: 991px) {
-    left: -5px;
-    top: -90px;
-    img {
-      width: 400px;
-    }
+    height: 300px;
   }
   @media (max-width: 768px) {
-    position: absolute;
-    width: 400px;
-    top: 160px;
-    left: -30px;
+    height: auto;
   }
-  @media (max-width: 576px) {
-    top: 120px;
-    img {
-      width: 380px;
+
+  img {
+    transform: rotate(-8deg);
+    width: 430px;
+    border-radius: 16px;
+    z-index: 155;
+    position: relative;
+    top: -55px;
+    left: 295px;
+    @media (max-width: 1400px) {
+      left: 205px;
     }
-  }
-  @media (max-width: 450px) {
-    left: -40px;
-    top: 100px;
-    img {
-      width: 80%;
+    @media (max-width: 1200px) {
+      left: 110px;
+      top: -50px;
+    }
+    @media (max-width: 991px) {
+      width: 300px;
+      left: 80px;
+      top: -60px;
+    }
+    @media (max-width: 768px) {
+      left: 60px;
+      top: -70px;
+      border-radius: 8px;
+    }
+    @media (max-width: 576px) {
+      left: 10px;
+      top: -60px;
+      border-radius: 8px;
+    }
+    @media (max-width: 450px) {
+      width: 130%;
+      top: -40px;
+      left: 0;
     }
   }
 
   &__back {
     position: absolute;
-    width: 350px;
+    width: 400px;
     border-radius: 20px;
-    top: 30%;
-    left: 150px;
+    top: 0;
+    left: 300px;
     z-index: -2;
     transform: rotate(65deg);
     height: 450px;
     background: #fff;
+    @media (max-width: 1400px) {
+      left: 200px;
+    }
+    @media (max-width: 1200px) {
+      width: 370px;
+      left: 120px;
+    }
     @media (max-width: 991px) {
-      width: 250px;
-      height: 300px;
+      width: 300px;
+      height: 250px;
       left: 80px;
+      top: -10px;
+      transform: rotate(-30deg);
+
     }
     @media (max-width: 768px) {
       display: none;

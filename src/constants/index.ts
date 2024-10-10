@@ -3,7 +3,7 @@ export const dataInfoCourseFirstPage = [
         id: 1,
         btnText: 'IELTS STANDART',
         text: 'Elementary darajadan IELTS darajasiga 6-9 oy ichida erishing! Master IELTS bilan har ikki kunda 2 soatlik darslar o‘tkaziladi. Bu faqatgina darslar emas, balki ingliz tili muhitiga haqiqiy sho‘ng‘ishdir.',
-        path: '/images/ielts-standard.webp',
+        path: '/images/bk1.webp',
     },
     {
         id: 2,
