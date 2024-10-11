@@ -7,6 +7,46 @@ const name = ref('')
 const phoneNumber = ref('')
 const nameError = ref('')
 const phoneError = ref('')
+const validateName = () => {
+  if (!name.value) {
+    nameError.value = 'Ismingizni kiriting';
+  } else if (name.value.length < 3) {
+    nameError.value = 'Ismingiz kamida 3 ta belgidan iborat bo\'lishi kerak';
+  } else {
+    nameError.value = '';
+  }
+};
+const formatPhoneNumber = () => {
+  if (!phoneNumber.value) {
+    phoneNumber.value = '+998 (';
+  }
+};
+
+const onPhoneInput = (event) => {
+  let value = event.target.value.replace(/\D/g, ''); // Remove non-digit characters
+  if (!value.startsWith('998')) {
+    value = '998' + value;
+  }
+
+  if (value.length <= 3) {
+    phoneNumber.value = `+${value}`;
+  } else if (value.length <= 5) {
+    phoneNumber.value = `+${value.slice(0, 3)}-(${value.slice(3)}`;
+  } else if (value.length <= 8) {
+    phoneNumber.value = `+${value.slice(0, 3)}-(${value.slice(3, 5)}) - ${value.slice(5)}`;
+  } else if (value.length <= 10) {
+    phoneNumber.value = `+${value.slice(0, 3)}-(${value.slice(3, 5)}) - ${value.slice(5, 8)} - ${value.slice(8)}`;
+  } else if (value.length <= 12) {
+    phoneNumber.value = `+${value.slice(0, 3)}-(${value.slice(3, 5)}) - ${value.slice(5, 8)} - ${value.slice(8, 10)} - ${value.slice(10)}`;
+  }
+
+  if (value.length < 12) {
+    phoneError.value = 'Telefon raqami noto‘g‘ri formatda';
+  } else {
+    phoneError.value = '';
+  }
+};
+
 
 function handleSubmit() {
   nameError.value = '';
@@ -21,7 +61,7 @@ function handleSubmit() {
   if (!name.value && !phoneNumber.value) {
     nameError.value = "Iltimos ismingizni kiriting";
   }
-  if (!nameError.value && !phoneError.value) {
+  if (!nameError.value && !phoneError.value && phoneNumber.value >= 12) {
     axios.get('https://api.telegram.org/bot7912836970:AAEi1lJACzuHlfkleVrkQoHDlOkJHwRx_LY/sendMessage', {
       params: {
         chat_id: -4504211502,
@@ -58,21 +98,29 @@ function handleSubmit() {
 
       <div class="auth-right">
         <div class="auth-form">
+          <label for="name">Ismingiz</label>
           <input
               type="text"
+              id="name"
               placeholder="Ismingiz"
               v-model="name"
+              @input="validateName"
               class="auth-form__input form-control"
-              :class="{'error':nameError}"
+              :class="{'error': nameError}"
           />
           <span v-if="nameError" class="error-msg">{{ nameError }}</span>
 
+          <label for="phone">Telefon raqamingiz</label>
           <input
               type="text"
-              placeholder="Telefon raqamingiz"
+              id="phone"
+              maxlength="25"
               v-model="phoneNumber"
+              @focus="formatPhoneNumber"
+              @input="onPhoneInput"
+              placeholder="+998 (__) ___-__-__"
               class="auth-form__input form-control"
-              :class="{'error':phoneError}"
+              :class="{'error': phoneError}"
           />
           <span v-if="phoneError" class="error-msg">{{ phoneError }}</span>
         </div>

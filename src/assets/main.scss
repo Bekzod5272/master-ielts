@@ -380,7 +380,6 @@
         flex-direction: row;
         justify-content: space-around;
         font-family: GothamProMedium;
-
         &__info {
           display: flex;
           flex-direction: column;
@@ -483,7 +482,7 @@
   }
 
   &__items {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   &__footer {
@@ -491,7 +490,9 @@
     justify-content: center;
   }
 }
-
+.course-list-left{
+  margin-bottom: 20px;
+}
 .course-list-left:nth-child(even) {
   .course-list__item__content {
     display: flex;
