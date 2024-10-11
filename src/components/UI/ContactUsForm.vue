@@ -24,7 +24,7 @@ function handleSubmit() {
   if (!nameError.value && !phoneError.value) {
     axios.get('https://api.telegram.org/bot7912836970:AAEi1lJACzuHlfkleVrkQoHDlOkJHwRx_LY/sendMessage', {
       params: {
-        chat_id: 5630347243,
+        chat_id: -4504211502,
         text: `Ism: ${name.value} \n\nTelefon raqami: ${phoneNumber.value}`,
         parse_mode: 'Markdown'
       }
@@ -229,7 +229,7 @@ function handleSubmit() {
 .auth-form__input {
   width: 100%;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1em;
   border-radius: 5px;
 }
