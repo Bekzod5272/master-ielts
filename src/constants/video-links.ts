@@ -17,7 +17,7 @@ export const dataVideoLinksFirst = [
     {
         id: 4,
         path: '/images/shorts-video-images/img_4.webp',
-        url: 'https://instagram.com/master-ielts.uz/4',
+        url: 'https://www.instagram.com/reel/C3-nZdQNNz3/?igsh=MWppeWxmMmtudjI4Nw==',
     },
 
 ]
@@ -72,14 +72,14 @@ export const dataVideoLinksEvenThree = [
     {
         id: 14,
         path: '/images/shorts-video-images/img_14.webp',
-        url: '',
+        url: 'https://www.instagram.com/reel/C0W42cwtSNp/?igsh=bnJwbW9tMzhlbHJn',
     },
 ]
 export const dataVideoLinksEvenFour = [
     {
         id: 15,
         path: '/images/shorts-video-images/img_15.webp',
-        url: '',
+        url: 'https://www.instagram.com/reel/C4bFfult2fr/?igsh=MXNyYjZpYmVqaDN0OA==',
     },
     {
         id: 16,
