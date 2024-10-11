@@ -61,7 +61,7 @@ function handleSubmit() {
   if (!name.value && !phoneNumber.value) {
     nameError.value = "Iltimos ismingizni kiriting";
   }
-  if (!nameError.value && !phoneError.value && phoneNumber.value >= 12) {
+  if (!nameError.value && !phoneError.value) {
     axios.get('https://api.telegram.org/bot7912836970:AAEi1lJACzuHlfkleVrkQoHDlOkJHwRx_LY/sendMessage', {
       params: {
         chat_id: -4504211502,
