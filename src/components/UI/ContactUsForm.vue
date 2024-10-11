@@ -28,7 +28,11 @@ function handleSubmit() {
         text: `Ism: ${name.value} \n\nTelefon raqami: ${phoneNumber.value}`,
         parse_mode: 'Markdown'
       }
-    }).then(() => alert("Ma'lumotlaringiz qabul qilindi!"))
+    }).then(() => {
+      name.value = ''
+      phoneNumber.value = ''
+      alert("Ma'lumotlaringiz qabul qilindi!")
+    })
         .catch(error => console.error("Xatolik yuz berdi:", error));
   }
 }

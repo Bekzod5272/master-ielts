@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-import AuthForm from "@/components/UI/ContactUsForm.vue";
+import ContactUsForm from "@/components/UI/ContactUsForm.vue";
 </script>
 <template>
   <div class="container">
-    <auth-form/>
+    <contact-us-form/>
   </div>
 </template>
