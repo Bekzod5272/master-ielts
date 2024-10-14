@@ -11,7 +11,7 @@
   cursor: pointer;
 
   img {
-    width: 200px;
+    width: 220px;
     object-fit: cover;
     object-position: center;
     @media (max-width: 768px) {
