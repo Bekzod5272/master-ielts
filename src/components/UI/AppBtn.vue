@@ -9,7 +9,8 @@
 <style>
 .custom-button {
   cursor: pointer;
-
+  position: relative;
+  z-index: 5555;
   img {
     width: 220px;
     object-fit: cover;

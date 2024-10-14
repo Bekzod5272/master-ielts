@@ -208,9 +208,8 @@ function handleSubmit() {
   font-weight: 800;
   margin-bottom: 20px;
   font-size: 50px;
-  font-family: SEGOEPRINT;
+  font-family: GothamProMedium;
   @media (max-width: 576px) {
-    font-family: GothamProMedium;
     margin-bottom: 10px;
     font-size: 35px;
   }
