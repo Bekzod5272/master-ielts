@@ -16,7 +16,8 @@
     "maska": "^3.0.3",
     "mitt": "^3.0.1",
     "swiper": "^9.4.1",
-    "vue": "^3.2.41"
+    "vue": "^3.2.41",
+    "vue3-marquee": "^4.2.2"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",

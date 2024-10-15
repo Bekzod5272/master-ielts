@@ -8,7 +8,10 @@ import AppFooter from "@/components/AppFooter.vue";
 import LocationMap from "@/components/LocationMap.vue";
 import {nextTick, onMounted, ref} from 'vue';
 import eventBus from '@/constants/eventBus';
+import Vue3Marquee from "vue3-marquee";
 import ContactUsForm from "@/components/UI/ContactUsForm.vue";
+import {dataVideoLinksFirst} from "@/constants/video-links";
+import * as url from "node:url";
 
 const authFormContainerRef = ref(null);
 
@@ -22,6 +25,7 @@ function scrollToAuthPage() {
   });
 }
 
+const img = dataVideoLinksFirst.map(url => url.path)
 onMounted(() => {
   eventBus.on('scroll-to-auth', scrollToAuthPage);
 });
@@ -46,7 +50,6 @@ onMounted(() => {
       <app-footer/>
     </div>
   </div>
-
 </template>
 <style lang="scss">
 .main {
