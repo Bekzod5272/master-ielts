@@ -95,7 +95,7 @@
   color: #111;
   position: relative;
   z-index: 11;
-  font-family: GothamProMedium;
+  font-family: Arial;
 }
 
 .master-ielts__hide-name {
@@ -654,7 +654,7 @@
 
   &::after {
     content: '';
-    width: 100%;
+    width: 92%;
     position: absolute;
     left: 0;
     right: 0;

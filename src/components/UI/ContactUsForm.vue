@@ -133,7 +133,7 @@ function handleSubmit() {
                 <a href="https://www.instagram.com/ielts_masterielts">
                   <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://t.me/masterielts27">
+                <a href="https://t.me/ielts_masterielts">
                   <i class="fa-brands fa-telegram"></i>
                 </a>
                 <a href="https://www.youtube.com/channel/UCFSHwAgBxpZ6-g9bxrD5sjQ">

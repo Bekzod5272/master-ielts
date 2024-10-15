@@ -42,7 +42,7 @@ console.log(imgUrls)
               </Vue3Marquee>
             </div>
             <div class="grid-container__column">
-              <Vue3Marquee style="width: 100% !important;" :pause-on-hover="true"  :vertical="true" :speed="100" >
+              <Vue3Marquee style="width: 100% !important;"  :pause-on-hover="true"  :vertical="true" :speed="100" >
                 <div v-for="(item, index) in dataVideoLinksSecond" :key="index">
                   <a :href="item.url" target="_blank">
                     <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
@@ -51,7 +51,7 @@ console.log(imgUrls)
               </Vue3Marquee>
             </div>
             <div class="grid-container__column">
-              <Vue3Marquee style="width: 100% !important;" :pause-on-hover="true" :vertical="true" :speed="100">
+              <Vue3Marquee style="width: 100% !important;"  :pause-on-hover="true" :vertical="true" :speed="100">
                 <div v-for="(item, index) in dataVideoLinksEvenThree" :key="index">
                   <a :href="item.url" target="_blank">
                     <img :src="item.path" :alt="'Image ' + (index + 1)" class="img-fluid"/>
