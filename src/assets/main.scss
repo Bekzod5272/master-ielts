@@ -111,9 +111,11 @@
   color: white;
   font-family: PLAY-BOLD;
 }
+
 .master-ielts__content__call__btn {
   pointer-events: auto;
 }
+
 @media (max-width: 991px) {
   .master-ielts__title {
     margin-top: 50px;
@@ -536,7 +538,19 @@
 
 
 .about-education-main {
-
+  margin-bottom: 120px;
+  @media (max-width: 991px) {
+    margin-bottom: 230px;
+  }
+  @media (max-width: 881px) {
+    margin-bottom: 280px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: 0;
+  }
   &__img {
     width: fit-content;
     margin: 0 auto;
@@ -654,7 +668,7 @@
 
   &::after {
     content: '';
-    width: 92%;
+    width: 100%;
     position: absolute;
     left: 0;
     right: 0;
@@ -669,6 +683,7 @@
       border-radius: 16px;
     }
     @media (max-width: 768px) {
+      width: 100%;
       bottom: 90px;
     }
     @media (max-width: 576px) {
@@ -1246,8 +1261,9 @@
     height: 250px;
   }
   @media (max-width: 450px) {
-  height: 150px;
+    height: 150px;
   }
+
   img {
     width: 550px;
     border-radius: 16px;

@@ -165,9 +165,9 @@ function handleSubmit() {
   }
   @media (max-width: 768px) {
     margin-top: 100px;
-    padding: 30px;
   }
   @media (max-width: 576px) {
+    padding: 30px;
     margin-top: 10px;
   }
 }
@@ -186,8 +186,11 @@ function handleSubmit() {
 
 .auth-img {
   width: 30%;
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     width: 50%;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
   }
 }
 
@@ -209,6 +212,10 @@ function handleSubmit() {
   margin-bottom: 20px;
   font-size: 50px;
   font-family: GothamProMedium;
+  @media (max-width: 991px) {
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
   @media (max-width: 768px) {
     margin-bottom: 10px;
     font-size: 30px;
@@ -225,10 +232,13 @@ function handleSubmit() {
   font-size: 1.2em;
   margin-top: 30px;
   font-family: Arial;
+  @media (max-width: 991px) {
+    margin-top: 0;
+
+  }
   @media (max-width: 768px) {
     width: 100%;
     font-size: 1rem;
-    margin-top: 0;
   }
   @media (max-width: 576px) {
     font-size: 0.8rem;

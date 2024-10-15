@@ -22,11 +22,7 @@ export const dataVideoLinksFirst = [
 
 ]
 export const dataVideoLinksSecond = [
-    // {
-    //     id: 5,
-    //     path: '/images/shorts-video-images/img_5.webp',
-    //     url: 'https://www.instagram.com/reel/C3DWv7Ot-7D/?igsh=bmJwbjhkaGJreDJh',
-    // },
+
     {
         id: 6,
         path: '/images/shorts-video-images/img_6.webp',
