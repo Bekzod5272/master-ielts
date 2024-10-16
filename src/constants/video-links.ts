@@ -7,7 +7,7 @@ export const dataVideoLinksFirst = [
     {
         id: 2,
         path: '/images/shorts-video-images/img_2.webp',
-        url: 'https://www.instagram.com/reel/C3NpxoBt7wd/?igsh=MW04eHI5azE0anFwcg==',
+        url: 'https://www.instagram.com/p/C2fTpdFt-u8/',
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ export const dataVideoLinksSecond = [
     {
         id: 7,
         path: '/images/shorts-video-images/img_7.webp',
-        url: 'https://www.instagram.com/reel/Cxx19Yttr6P/?igsh=MTB4M3QwajhicnZmMw==',
+        url: 'https://www.instagram.com/p/CqnZaz5pyqm/',
     },
     {
         id: 7,
@@ -68,7 +68,7 @@ export const dataVideoLinksEvenThree = [
     {
         id: 14,
         path: '/images/shorts-video-images/img_14.webp',
-        url: 'https://www.instagram.com/reel/C0W42cwtSNp/?igsh=bnJwbW9tMzhlbHJn',
+        url: 'https://www.instagram.com/p/CiApri3PWXo/',
     },
 ]
 export const dataVideoLinksEvenFour = [

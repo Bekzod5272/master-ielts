@@ -44,16 +44,9 @@ const onSlideChange = (swiper: { activeIndex: number }) => {
 <style scoped lang="scss">
   .swiper {
     .about-ielts__header {
-      margin-top: 30px;
-      @media (max-width: 768px) {
-        margin-top: 50px;
-      }
     }
     .about-ielts__title{
-      font-size: 40px;
-      @media (max-width: 768px) {
-        font-size: 25px;
-      }
+      font-size: 42px;
     }
     .course-list__item-description{
         padding: 5px;
@@ -73,6 +66,10 @@ const onSlideChange = (swiper: { activeIndex: number }) => {
           font-size: 12px;
           border-top: none;
         }
+    }
+    .about-ielts__title{
+      margin-top: 55px;
+      margin-bottom: 0;
     }
   }
 </style>
