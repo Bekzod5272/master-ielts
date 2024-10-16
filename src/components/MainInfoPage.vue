@@ -26,7 +26,7 @@ function handleButtonClick() {
     <div class="master-ielts__content__call">
       <app-btn @click="handleButtonClick" class="master-ielts__content__call__btn"/>
       <p class="master-ielts__extra-text">
-        Be’pul birinchi darsga yozilib, o’z maqsadlaringizga erishish uchun birinchi qadamni tashlang.
+        Be’pul birinchi darsga yozilib,<br> o’z maqsadlaringizga erishish uchun <br> birinchi qadamni tashlang.
       </p>
       <img src="/public/images/fon4.webp" class="master-ielts__content__call__img img-fluid"/>
     </div>
