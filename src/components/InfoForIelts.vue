@@ -24,6 +24,7 @@ function handleButtonClick() {
         <div class="section__content__infos__image">
           <a href="https://www.instagram.com/reel/C_0igayNPx8/?igsh=eHI5emF2cmVubW9t" target="_blank">
             <img class="section__content__infos__image__front" src="/public/images/m5.webp">
+            <p class="section__content__infos__image__text">Ieltsdan yuqori ball olmoqchimisiz ? Bunda bizga yechim bor, hoziroq qabulga yoziling.</p>
           </a>
           <div class="section__content__infos__image__back"/>
         </div>
