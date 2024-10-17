@@ -8,12 +8,16 @@ import AppFooter from "@/components/AppFooter.vue";
 import LocationMap from "@/components/LocationMap.vue";
 import {nextTick, onMounted, ref} from 'vue';
 import eventBus from '@/constants/eventBus';
-import Vue3Marquee from "vue3-marquee";
 import ContactUsForm from "@/components/UI/ContactUsForm.vue";
 import {dataVideoLinksFirst} from "@/constants/video-links";
-import * as url from "node:url";
 
+const mainInfoPageRef = ref(null);
+const infoForIeltsRef = ref(null);
+const aboutMentorsRef = ref(null);
+const aboutCourseRef = ref(null);
+const aboutEducationRef = ref(null);
 const authFormContainerRef = ref(null);
+const toggleMenu = ref(false)
 
 function scrollToAuthPage() {
   nextTick(() => {
@@ -25,6 +29,55 @@ function scrollToAuthPage() {
   });
 }
 
+function scrollToMainInfoPage() {
+  toggleMenu.value = false
+  nextTick(() => {
+    if (mainInfoPageRef.value) {
+      mainInfoPageRef.value.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+}
+
+function scrollToInfoForIelts() {
+  toggleMenu.value = false
+  nextTick(() => {
+    if (infoForIeltsRef.value) {
+      infoForIeltsRef.value.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+}
+
+function scrollToAboutMentors() {
+  toggleMenu.value = false
+  nextTick(() => {
+    if (aboutMentorsRef.value) {
+      aboutMentorsRef.value.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+}
+
+function scrollToAboutCourse() {
+  toggleMenu.value = false
+  nextTick(() => {
+    if (aboutCourseRef.value) {
+      aboutCourseRef.value.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+}
+
+function scrollToAboutEducation() {
+  toggleMenu.value = false
+  nextTick(() => {
+    if (aboutEducationRef.value) {
+      aboutEducationRef.value.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+}
+
+function toggleModal() {
+  toggleMenu.value = !toggleMenu.value
+}
+
 const img = dataVideoLinksFirst.map(url => url.path)
 onMounted(() => {
   eventBus.on('scroll-to-auth', scrollToAuthPage);
@@ -33,13 +86,50 @@ onMounted(() => {
 
 <template>
   <div class="main main-container">
-    <main-info-page/>
-    <div class="infos-for-ielts">
-      <info-for-ielts/>
-      <about-mentors/>
-      <about-course/>
+    <div class="main__header-menu">
+      <div class="main__header-menu__icon">
+        <i class="fa-solid fa-bars" @click="toggleModal"/>
+      </div>
+      <ul v-show="toggleMenu" :class="{ 'enter-active': toggleMenu }">
+        <li @click="scrollToMainInfoPage()">
+          Main menu
+          <hr>
+        </li>
+        <li @click="scrollToInfoForIelts()">
+          Speakingdan 8 olish uchun...
+          <hr>
+        </li>
+        <li @click="scrollToAboutMentors()">
+          IELTS 7+ olish uchun ...
+          <hr>
+        </li>
+        <li @click="scrollToAboutCourse()">
+          Bizning kurslar
+          <hr>
+        </li>
+        <li @click="scrollToAboutEducation()">
+          Galereya
+          <hr>
+        </li>
+        <li @click="scrollToAuthPage()">
+          Ro'yxatdan o'tish
+          <hr>
+        </li>
+      </ul>
     </div>
-    <div class="main-info-education">
+    <main-info-page ref="mainInfoPage"/>
+    <div class="infos-for-ielts">
+      <div ref="infoForIeltsRef">
+        <info-for-ielts/>
+      </div>
+      <div ref="aboutMentorsRef">
+        <about-mentors/>
+      </div>
+      <div ref="aboutCourseRef">
+        <about-course/>
+      </div>
+    </div>
+    <div class="main-info-education" ref="aboutEducationRef">
       <div class="main-info-education__contents">
         <about-education/>
         <div ref="authFormContainerRef">
@@ -59,6 +149,42 @@ onMounted(() => {
   background-size: cover;
   background-position: top;
   position: relative;
+
+  &__header-menu {
+    display: none;
+    transition: display 2s;
+    @media (max-width: 768px) {
+      display: block;
+      width: fit-content;
+      padding-top: 10px;
+      margin-left: auto;
+      margin-right: 20px;
+      position: absolute;
+      z-index: 111;
+      right: 0;
+
+      &__icon {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+      }
+      i {
+        font-size: 40px;
+      }
+      ul {
+        width: 100%;
+        background: #AF34EE;
+        padding: 20px;
+        color: white;
+        font-size: 17px;
+
+        li {
+          cursor: pointer;
+          pointer-events: auto;
+        }
+      }
+    }
+  }
 }
 
 .infos-for-ielts {
