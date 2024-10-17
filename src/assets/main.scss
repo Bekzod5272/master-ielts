@@ -476,7 +476,8 @@
 }
 
 .course-list__item-image {
-  width: 39%;
+  width: 50%;
+  height: 100%;
   margin-bottom: auto;
 }
 
@@ -510,7 +511,8 @@
 .course-list-left {
   margin-bottom: 40px;
 }
-
+.course-list__item__content{
+}
 .course-list-left:nth-child(even) {
   .course-list__item__content {
     display: flex;

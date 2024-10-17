@@ -102,7 +102,6 @@ function handleSubmit() {
           <input
               type="text"
               id="name"
-              placeholder="Ismingiz"
               v-model="name"
               @input="validateName"
               class="auth-form__input form-control"
