@@ -8,27 +8,26 @@
       </div>
       <div class="footer__nav">
         <div>
-          <p class="footer__nav__title">Навигация</p>
+          <p class="footer__nav__title">Ma'lumotlar</p>
           <ul class="footer__nav__list">
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Результаты</a></li>
-            <li><a href="#">Курсы</a></li>
-            <li><a href="#">Преподаватели</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Biz haqimizda</a></li>
+            <li><a href="#">Natijalar</a></li>
+            <li><a href="#">Kurslar</a></li>
+            <li><a href="#">O'qituvchilar</a></li>
+            <li><a href="#">Kontaktlar</a></li>
           </ul>
         </div>
         <div class="footer__hours">
-          <p class="footer__nav__title">Режим работы</p>
+          <p class="footer__nav__title">Ishlash rejimi</p>
           <ul>
-            <li>Понедельник - Суббота</li>
-            <li>09:00 - 21:00</li>
-            <li>Обед</li>
+            <li>Dushanba - shanba</li>
+            <li>10:00 - 20:00</li>
             <li>13:00 - 14:00</li>
           </ul>
         </div>
         <div class="footer__address">
-          <p class="footer__address__title">Адрес</p>
-          <p class="footer__address__region">Ташкент, Узбекистан</p>
+          <p class="footer__address__title">Manzil</p>
+          <p class="footer__address__region">Toshkent, Oʻzbekiston</p>
           <div class="footer__social">
             <a href="https://t.me/ielts_masterielts" target="_blank"><i class="fa-brands fa-telegram"></i></a>
             <a href="https://www.facebook.com/masterielts.uz/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
