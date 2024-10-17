@@ -20,7 +20,7 @@
         <div class="footer__hours">
           <p class="footer__nav__title">Ishlash rejimi</p>
           <ul>
-            <li>Dushanba - shanba</li>
+            <li>Dushanba - Shanba</li>
             <li>10:00 - 20:00</li>
             <li>13:00 - 14:00</li>
           </ul>
