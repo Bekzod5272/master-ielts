@@ -28,7 +28,7 @@ function handleButtonClick() {
       <p class="master-ielts__extra-text">
         Be’pul birinchi darsga yozilib,<br> o’z maqsadlaringizga erishish uchun <br> birinchi qadamni tashlang.
       </p>
-      <img src="/public/images/fon4.webp" class="master-ielts__content__call__img img-fluid"/>
+      <img src="/public/images/fon4.webp" class="master-ielts__content__call__img"/>
     </div>
   </div>
 </template>

@@ -81,7 +81,7 @@ function handleSubmit() {
 
 <template>
   <div class="auth-container container">
-    <img src="/images/master-ielts-word.webp" class="auth-img img-fluid"/>
+    <img src="/images/master-ielts-word2.png" class="auth-img img-fluid"/>
     <div class="auth-section">
 
       <div class="auth-left">
@@ -186,6 +186,7 @@ function handleSubmit() {
 
 .auth-img {
   width: 30%;
+
   @media (max-width: 991px) {
     width: 50%;
   }
@@ -198,6 +199,9 @@ function handleSubmit() {
   width: 50%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 881px) {
+    width: 45%;
+  }
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -211,14 +215,14 @@ function handleSubmit() {
   font-weight: 800;
   margin-bottom: 20px;
   font-size: 50px;
-  font-family: GothamProMedium;
+  font-family: GothamProBlack;
   @media (max-width: 991px) {
     margin-bottom: 10px;
     font-size: 35px;
   }
   @media (max-width: 768px) {
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 35px;
   }
   @media (max-width: 576px) {
     margin-bottom: 10px;
@@ -269,6 +273,9 @@ function handleSubmit() {
 
 .auth-right {
   width: 50%;
+  @media (max-width: 881px) {
+    width: 55%;
+  }
   @media (max-width: 768px) {
     width: 100%;
   }

@@ -82,6 +82,7 @@
   }
 
   &__img {
+    width: 100%;
     position: absolute;
     filter: blur(40px);
     left: 80px;
@@ -136,8 +137,9 @@
     align-items: start;
 
     &__img {
-      top: 0;
-      filter: blur(40px);
+      width: 400px;
+      top: -50px;
+      filter: blur(30px);
       left: 0;
     }
 
@@ -198,6 +200,7 @@
     top: 55%;
   }
   .master-ielts__content__call__img {
+    left: -65px;
     top: -50px;
     filter: blur(20px);
   }
@@ -224,8 +227,9 @@
     flex-direction: column-reverse;
 
     &__img {
-      top: -20px;
-      left: 0;
+      width: 400px;
+      top: -70px;
+      left: -80px;
     }
   }
   .master-ielts__extra-text {
@@ -250,7 +254,7 @@
     letter-spacing: 10px;
     font-weight: 500;
   }
-  .master-ielts__content__text{
+  .master-ielts__content__text {
     top: 20px;
   }
   .master-ielts__description {
@@ -285,7 +289,7 @@
   .master-ielts__subtitle {
     left: 40px;
   }
-  .master-ielts__description{
+  .master-ielts__description {
     margin-left: 30px;
   }
 }
@@ -555,6 +559,7 @@
   @media (max-width: 576px) {
     margin-bottom: 0;
   }
+
   &__img {
     width: fit-content;
     margin: 0 auto;
@@ -637,6 +642,7 @@
 
   }
 }
+
 .about-education-header {
   margin-bottom: 30px;
 }
@@ -1257,6 +1263,7 @@
   position: relative;
   z-index: 2;
   pointer-events: auto;
+
   &__text {
     width: 60%;
     position: absolute;
@@ -1267,43 +1274,44 @@
     font-size: small;
     transform: rotate(-5deg);
     color: black;
-    @media (max-width:1400px ) {
+    @media (max-width: 1400px) {
       left: 260px;
     }
-    @media (max-width:1200px ) {
+    @media (max-width: 1200px) {
       left: 180px;
       width: 70%;
     }
-    @media (max-width:991px ) {
+    @media (max-width: 991px) {
       top: 100px;
       left: 150px;
       font-size: 11px;
     }
-    @media (max-width:768px ) {
+    @media (max-width: 768px) {
       width: 100%;
       top: 130px;
       left: 50px;
     }
-    @media (max-width:576px ) {
+    @media (max-width: 576px) {
       width: 90%;
       top: 110px;
     }
-    @media (max-width:500px ) {
+    @media (max-width: 500px) {
       width: 100%;
     }
-    @media (max-width:450px ) {
+    @media (max-width: 450px) {
       width: 100%;
       top: 65px;
       left: 65px;
       font-size: 8px;
     }
-    @media (max-width:450px ) {
+    @media (max-width: 450px) {
       width: 100%;
       top: 70px;
       left: 50px;
       font-size: 8px;
     }
   }
+
   a {
     cursor: pointer;
   }
