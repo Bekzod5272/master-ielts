@@ -1,12 +1,4 @@
-<script setup>
-import AppBtn from "@/components/UI/AppBtn.vue";
-import eventBus from '@/constants/eventBus';
-
-function handleButtonClick() {
-  console.log('csc')
-  eventBus.emit('scroll-to-auth');
-}
-
+<script setup lang="ts">
 const mentors = [
   {id: 1, name: 'Sherzod Mutalipov', image: '/images/sherzod.webp'},
   {id: 2, name: 'Sarvar Tolipov', image: '/images/sarvar.webp'},
@@ -51,7 +43,7 @@ const mentors = [
         </div>
       </div>
     </div>
-        <p class="mentors-section__information__footer__text">natijaga birinchi qadam</p>
+    <p class="mentors-section__information__footer__text">natijaga birinchi qadam</p>
     <div class="mentors-section__information__footer">
       <img src="/public/images/eagle.webp" class="mentors-section__information__footer__eagle-image img-fluid">
     </div>

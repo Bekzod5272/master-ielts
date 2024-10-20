@@ -21,10 +21,24 @@ const toggleMenu = ref(false)
 
 function scrollToAuthPage() {
   nextTick(() => {
-    if (authFormContainerRef.value) {
       authFormContainerRef.value.scrollIntoView({behavior: 'smooth'});
-    } else {
-      console.log("authPageRef.value is null");
+  });
+}
+
+function scrollToAboutCourses() {
+  nextTick(() => {
+    aboutCourseRef.value.scrollIntoView({behavior: 'smooth'});
+  });
+}
+function scrollToResult() {
+  nextTick(() => {
+    if (aboutEducationRef.value) {
+      const element = aboutEducationRef.value;
+      const top = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: top + 360,
+        behavior: 'smooth'
+      });
     }
   });
 }
@@ -38,7 +52,7 @@ function scrollToMainInfoPage() {
   });
 }
 
-function scrollToInfoForIelts() {
+function scrollToInfoForIeltsIn() {
   toggleMenu.value = false
   nextTick(() => {
     if (infoForIeltsRef.value) {
@@ -80,7 +94,12 @@ function toggleModal() {
 
 const img = dataVideoLinksFirst.map(url => url.path)
 onMounted(() => {
+  eventBus.on('scroll-to-about-course', scrollToAboutCourses);
   eventBus.on('scroll-to-auth', scrollToAuthPage);
+  eventBus.on('scroll-to-about-education',scrollToAboutEducation)
+  eventBus.on('scroll-to-about-result',scrollToResult)
+  eventBus.on('scroll-to-about-mentors',scrollToAboutMentors)
+
 });
 </script>
 
@@ -95,7 +114,7 @@ onMounted(() => {
           Main menu
           <hr>
         </li>
-        <li @click="scrollToInfoForIelts()">
+        <li @click="scrollToInfoForIeltsIn()">
           Speakingdan 8 olish uchun...
           <hr>
         </li>
@@ -170,6 +189,7 @@ onMounted(() => {
       }
       i {
         font-size: 40px;
+        color: #fff;
       }
       ul {
         width: 100%;
