@@ -511,8 +511,10 @@
 .course-list-left {
   margin-bottom: 40px;
 }
-.course-list__item__content{
+
+.course-list__item__content {
 }
+
 .course-list-left:nth-child(even) {
   .course-list__item__content {
     display: flex;
@@ -1227,6 +1229,9 @@
     @media (max-width: 578px) {
       width: 35%;
     }
+    @media (max-width: 400px) {
+      width: 40%;
+    }
   }
 
   @media (max-width: 991px) {
@@ -1312,12 +1317,12 @@
       top: 100px;
     }
     @media (max-width: 450px) {
-      top: 80px;
+      top: 90px;
       left: 35px;
       font-size: 8px;
     }
     @media (max-width: 400px) {
-      top: 60px;
+      top: 70px;
       left: 50px;
       font-size: 8px;
     }
@@ -1376,6 +1381,7 @@
     @media (max-width: 450px) {
       left: -60px;
       width: 300px;
+      top: -45px;
     }
     @media (max-width: 400px) {
       left: -30px;
