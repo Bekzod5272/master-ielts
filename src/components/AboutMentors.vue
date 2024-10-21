@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import eventBus from "@/constants/eventBus";
+
 const mentors = [
   {id: 1, name: 'Sherzod Mutalipov', image: '/images/sherzod.webp'},
   {id: 2, name: 'Sarvar Tolipov', image: '/images/sarvar.webp'},
@@ -7,6 +9,10 @@ const mentors = [
   {id: 5, name: 'Bekzod Ziyatov', image: '/images/bekzod.webp'},
   {id: 6, name: 'Sardor Dadashev', image: '/images/sardor.webp'},
 ]
+
+function handleButtonClick() {
+  eventBus.emit('scroll-to-auth')
+}
 </script>
 <template>
   <div class="mentors-section container">
