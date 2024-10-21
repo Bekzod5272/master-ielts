@@ -11,12 +11,11 @@
 .master-ielts__image img {
   position: absolute;
   height: 100%;
-  top: 45%;
+  top: 55%;
   left: 50%;
   transform-origin: top left;
-  transform: scale(1.4) translateX(-50%) translateY(-50%);
+  transform: scale(1.1) translateX(-50%) translateY(-50%);
   z-index: 12;
-
 }
 
 .master-ielts__content {
@@ -148,7 +147,7 @@
     }
   }
   .master-ielts__image img {
-    top: 55%;
+    top: 65%;
   }
   .master-ielts__content__call .custom-button img {
     width: 150px;
@@ -197,7 +196,6 @@
   }
   .master-ielts__image img {
     height: 80%;
-    top: 55%;
   }
   .master-ielts__content__call__img {
     left: -65px;
@@ -270,8 +268,7 @@
 
 @media (max-width: 430px) {
   .master-ielts__image img {
-    top: 50%;
-    transform: scale(1.2) translate(-50%, -50%);
+    transform: scale(0.9) translate(-50%, -65%);
   }
   .master-ielts__title {
     margin-top: 75px;
