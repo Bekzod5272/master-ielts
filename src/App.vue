@@ -228,7 +228,7 @@ onMounted(() => {
 
 .main-info-education {
   position: relative;
-  bottom: 0;
+  bottom: 50px;
 
   &__contents {
     background: linear-gradient(

@@ -24,7 +24,8 @@ function handleButtonClick() {
         <div class="section__content__infos__image">
           <a href="https://www.instagram.com/reel/C_0igayNPx8/?igsh=eHI5emF2cmVubW9t" target="_blank">
             <img class="section__content__infos__image__front" src="/public/images/m5.webp">
-            <p class="section__content__infos__image__text">Ieltsdan yuqori ball olmoqchimisiz ? Bunda bizga yechim bor, hoziroq qabulga yoziling.</p>
+            <p class="section__content__infos__image__text">Ieltsdan yuqori ball olmoqchimisiz ? Bunda bizga yechim bor,
+              hoziroq qabulga yoziling.</p>
           </a>
           <div class="section__content__infos__image__back"/>
         </div>
@@ -32,9 +33,10 @@ function handleButtonClick() {
           <ul class="info-list">
             <li class="info-list__item" v-for="items in dataInfoIelts">
               <i :class="items.iconClass"></i>
-              <div>
-                <p v-html="items.text" class="info-list__text"/>
-                <span class="info-list__highlight"><strong>{{ items.strong }}</strong></span>
+              <div class="info-list__item__text">
+                <p class="info-list__text">{{ items.text }}
+                  <span class="info-list__highlight"><strong>{{ items.strong }}</strong></span>
+                </p>
               </div>
             </li>
           </ul>
