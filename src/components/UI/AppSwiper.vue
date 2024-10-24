@@ -43,8 +43,6 @@ const onSlideChange = (swiper: { activeIndex: number }) => {
 </template>
 <style scoped lang="scss">
   .swiper {
-    .about-ielts__header {
-    }
     .about-ielts__title{
       font-size: 42px;
     }

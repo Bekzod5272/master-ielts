@@ -10,7 +10,7 @@ function handleButtonClick() {
   eventBus.emit('scroll-to-auth');
 }
 
-const combinedArray = dataInfoCourseSecondPage.concat(dataInfoCourseFirstPage)
+const combinedArray = dataInfoCourseFirstPage.concat(dataInfoCourseSecondPage)
 
 
 </script>
