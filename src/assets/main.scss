@@ -407,11 +407,12 @@
           }
           @media (max-width: 576px) {
             justify-content: center;
-            padding: 0;
+            padding: 10px;
             margin-bottom: 80px;
           }
           img {
             padding: 0 10px;
+            height: 450px;
           }
         }
       }
@@ -551,7 +552,7 @@
 .swiper-pagination-bullets {
   margin-bottom: 20px !important;
   @media (max-width:500px) {
-    margin-bottom: 50px !important;
+    margin-bottom: 100px !important;
   }
 }
 

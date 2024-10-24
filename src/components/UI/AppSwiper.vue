@@ -59,6 +59,10 @@ const onSlideChange = (swiper: { activeIndex: number }) => {
           clip-path: polygon(0% 10%, 100% -65%, 100% 97%, 0 100%);
         }
         @media (max-width: 768px) {
+          height: 90px;
+          display: flex;
+          align-items: center;
+          padding: 10px;
           margin: 0 10px;
           font-family: GothamProMedium;
           font-size: 12px;
