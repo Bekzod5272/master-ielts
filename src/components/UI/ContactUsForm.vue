@@ -166,7 +166,7 @@ function handleSubmit() {
     margin-top: 100px;
   }
   @media (max-width: 576px) {
-    padding: 30px;
+    padding: 15px;
     margin-top: 10px;
   }
 }
@@ -225,7 +225,7 @@ function handleSubmit() {
   }
   @media (max-width: 576px) {
     margin-bottom: 10px;
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 
@@ -244,7 +244,6 @@ function handleSubmit() {
     font-size: 1rem;
   }
   @media (max-width: 576px) {
-    font-size: 0.8rem;
   }
 }
 
@@ -289,9 +288,11 @@ function handleSubmit() {
   input {
     font-family: GothamProMedium;
     @media (max-width: 576px) {
-      font-size: 9px !important;
+      font-size: 15px !important;
     }
-
+  }
+  label {
+    font-size: 18px !important;
   }
 }
 

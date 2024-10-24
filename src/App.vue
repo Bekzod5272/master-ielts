@@ -218,7 +218,7 @@ onMounted(() => {
     transform: translateY(-2%);
   }
   @media (max-width: 576px) {
-    padding: 0 30px;
+    padding: 0 10px;
   }
   @media (max-width: 430px) {
     top: -5%;

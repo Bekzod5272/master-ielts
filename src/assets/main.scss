@@ -545,6 +545,9 @@
 
 .swiper-pagination-bullets {
   margin-bottom: 20px !important;
+  @media (max-width:500px) {
+    margin-bottom: 40px !important;
+  }
 }
 
 //about-education.vue
@@ -830,6 +833,9 @@
       @media (max-width: 991px) {
         font-size: 30px;
       }
+      @media (max-width: 576px) {
+        font-size: 34px;
+      }
     }
 
     &__info-text-italic {
@@ -846,7 +852,7 @@
         font-size: 32px;
       }
       @media (max-width: 576px) {
-        font-size: 25px;
+        font-size: 30px;
         word-spacing: 10px;
       }
       @media (max-width: 400px) {
@@ -1040,7 +1046,9 @@
 .footer {
   color: white;
   padding: 30px 30px 0 30px;
-
+  @media (max-width: 576px) {
+    padding: 30px 10px 0 10px;
+  }
   li {
     list-style: none;
   }
