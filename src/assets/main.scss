@@ -421,8 +421,7 @@
           }
           img {
             padding: 0 10px;
-            height: 450px;
-            object-fit: cover;
+            height: auto;
             @media (max-width: 450px) {
               padding: 0;
             }
