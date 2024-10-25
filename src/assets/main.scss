@@ -934,6 +934,9 @@
           font-size: 33px;
           text-align: center;
         }
+        @media (max-width: 450px) {
+          margin-bottom: 20px;
+        }
       }
 
       &__eagle-image {
