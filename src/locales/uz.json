@@ -1,0 +1,96 @@
+{
+    "main": {
+        "hideName": "Sherzod Mutalipov",
+        "title": "MASTER IELTS",
+        "content": {
+            "title": "Sherzod Mutalipov",
+            "subtitle": " Eng qisqa vaqtda ",
+            "subtitle2": " ni qo'lga kiriting! "
+        },
+        "contentCall": {
+            "text1": " Be’pul birinchi darsga yozilib,",
+            "text2": "o’z maqsadlaringizga erishish uchun ",
+            "text3": "birinchi qadamni tashlang."
+        }
+    },
+    "infoIelts": {
+        "section": {
+            "title1": "SPEAKINGDAN",
+            "title2": "8 OLISH",
+            "title3": "UCHUN ",
+            "title4": "NIMA QILISH",
+            "title5": "KERAK?",
+            "title6": "OLISH",
+            "title7": "nima qilish kerak?",
+            "infosText": "Ieltsdan yuqori ball olmoqchimisiz ? Bunda bizga yechim bor, hoziroq qabulga yoziling."
+        },
+        "infoList": {
+            "item1": "Tayyorlangan Savollardan Ko’ra, Spontan Suhbatga",
+            "item1Strong": "O’zingizni Moslashtiring",
+            "item2": "Leksik Boylikni Oshirish va Turli Iboralarni ",
+            "item2Strong": "Qo’llash",
+            "item3": "Talafuz va Intonatsiyaga ",
+            "item3Strong": "E’tibor Bering."
+        }
+    },
+    "aboutMentors": {
+        "singIn": "Ro’yxatdan o’tish kerak",
+        "firstStep": "natijaga birinchi qadam",
+        "mentors": {
+            "name1": "Sherzod Mutalipov",
+            "name2": "Sarvar Tolipov",
+            "name3": "Abdulloh Yusufxo'jayev",
+            "name4": "Abdulloh Abdug'aniyev",
+            "name5": "Bekzod Ziyatov",
+            "name6": "Sardor Dadashev"
+        },
+        "our": "Bizning",
+        "mentorsText": "Mentorlar"
+    },
+    "aboutCourse": {
+        "our": "Bizning",
+        "course": "Kurslar",
+        "dataText": {
+            "text1": {
+                "btnText": "IELTS STANDART",
+                "text": "Elementary darajadan IELTS darajasiga 6-9 oy ichida erishing! Master IELTS bilan har ikki kunda 2 soatlik darslar o‘tkaziladi. Bu faqatgina darslar emas, balki ingliz tili muhitiga haqiqiy sho‘ng‘ishdir."
+            },
+            "text2": {
+                "btnText": "IELTS INTENSIVE",
+                "text": "Pre-intermediate darajasida IELTS darajasiga 3-4 oy ichida erishing! Har kuni 2 soatdan yoki 4 soatdan darslar o'tkaziladi."
+            },
+            "text3": {
+                "btnText": "IELTS Pro",
+                "text": "Pre-IELTS darajasidan IELTS darajasiga atigi 2 oyda erishing! Har kuni 4 soatlik intensiv darslar bilan tez va samarali natijalarga erishing"
+            },
+            "text4": {
+                "btnText": "CEFR C1",
+                "text": "Yuqorida ko'rsatilgan barcha IELTS ga oid o'quv darslarimizni xuddi shunday tarzda CEFR uchun ham tayyorlaymiz. Sizga mos keladigan daraja va jadvalni tanlang."
+            },
+            "text5": {
+                "btnText": "Business Speaking",
+                "text": "Biznes hamkorlar bilan erkin muloqot qilish uchun. Bizning maxsus kurslarimiz yordamida ishdagi muloqot ko'nikmalaringizni yaxshilang va muvaffaqiyatga erishing."
+            }
+        }
+    },
+    "aboutEducation": {
+        "title": "Master IELTS — ingliz tilini o’rgatish bo’yicha 9 yildan ortiq tajribaga ega va maxsus Mutalipov Sherzod tomonidan ishlab chiqilgan o’ziga xos metodikaga asoslanadi. Biz boshqa ta’lim markazlari singari ishlamaymiz; har bir talabani individual ravishda o’rgatamiz va mavzularni chuqur tushuntiramiz, tariflardan farqli o’laroq! Faqat sifat va natija."
+    },
+    "contactUsForm": {
+        "call": "BOG’LANISH",
+        "extrame": "Ariza qoldiring va bizning menejyorlarimiz tez orada siz bilan bog’lanishadi.",
+        "name": "Ismingiz",
+        "phoneNumber": "Telefon raqamingiz",
+        "yunusabod": "Yunusobod",
+        "novza": "Novza"
+    },
+    "validation": {
+        "nameError": "Iltimos ismingizni kiriting",
+        "nameFormat": "Ismingiz kamida 3 ta belgidan iborat bo'lishi kerak",
+        "phoneRequired": "Telefon raqamini kiriting",
+        "phoneFormat": "Telefon raqami 9 bilan boshlanishi kerak",
+        "fullEnterPhone": "Telefon raqami to'liq kiriting",
+        "phoneFormatErr": "Telefon raqami noto'g'ri formatda"
+    },
+    "ielts": "IELTS"
+}
