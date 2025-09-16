@@ -6,11 +6,16 @@
     dataVideoLinksEvenThree,
     dataVideoLinksEvenFive,
   } from '@/constants/video-links'
+  import { ref } from 'vue'
   import { useI18n } from 'vue-i18n'
   import { Vue3Marquee } from 'vue3-marquee'
 
-  const imgUrls = dataVideoLinksFirst.map((item) => item.path)
   const { t } = useI18n()
+  const imageLoaded = ref<Record<string, boolean>>({})
+
+  const handleImageLoad = (key: string) => {
+    imageLoaded.value[key] = true
+  }
 </script>
 <template>
   <div class="about-education-main main-container">
@@ -41,17 +46,24 @@
               >
                 <div
                   v-for="(item, index) in dataVideoLinksFirst"
-                  :key="index"
+                  :key="'first-' + index"
+                  class="image-wrapper"
                 >
                   <a
                     :href="item.url"
                     target="_blank"
                   >
+                    <div
+                      v-if="!imageLoaded['first-' + index]"
+                      class="loader"
+                    ></div>
+
                     <img
                       :src="item.path"
                       :alt="'Image ' + (index + 1)"
                       class="img-fluid"
                       loading="lazy"
+                      @load="handleImageLoad('first-' + index)"
                     />
                   </a>
                 </div>
@@ -66,17 +78,24 @@
               >
                 <div
                   v-for="(item, index) in dataVideoLinksSecond"
-                  :key="index"
+                  :key="'first-' + index"
+                  class="image-wrapper"
                 >
                   <a
                     :href="item.url"
                     target="_blank"
                   >
+                    <div
+                      v-if="!imageLoaded['first-' + index]"
+                      class="loader"
+                    ></div>
+
                     <img
                       :src="item.path"
                       :alt="'Image ' + (index + 1)"
                       class="img-fluid"
                       loading="lazy"
+                      @load="handleImageLoad('first-' + index)"
                     />
                   </a>
                 </div>
@@ -91,17 +110,24 @@
               >
                 <div
                   v-for="(item, index) in dataVideoLinksEvenThree"
-                  :key="index"
+                  :key="'first-' + index"
+                  class="image-wrapper"
                 >
                   <a
                     :href="item.url"
                     target="_blank"
                   >
+                    <div
+                      v-if="!imageLoaded['first-' + index]"
+                      class="loader"
+                    ></div>
+
                     <img
                       :src="item.path"
                       :alt="'Image ' + (index + 1)"
                       class="img-fluid"
                       loading="lazy"
+                      @load="handleImageLoad('first-' + index)"
                     />
                   </a>
                 </div>
@@ -116,17 +142,24 @@
               >
                 <div
                   v-for="(item, index) in dataVideoLinksEvenFour"
-                  :key="index"
+                  :key="'first-' + index"
+                  class="image-wrapper"
                 >
                   <a
                     :href="item.url"
                     target="_blank"
                   >
+                    <div
+                      v-if="!imageLoaded['first-' + index]"
+                      class="loader"
+                    ></div>
+
                     <img
                       :src="item.path"
                       :alt="'Image ' + (index + 1)"
                       class="img-fluid"
                       loading="lazy"
+                      @load="handleImageLoad('first-' + index)"
                     />
                   </a>
                 </div>
@@ -141,17 +174,24 @@
               >
                 <div
                   v-for="(item, index) in dataVideoLinksEvenFive"
-                  :key="index"
+                  :key="'first-' + index"
+                  class="image-wrapper"
                 >
                   <a
                     :href="item.url"
                     target="_blank"
                   >
+                    <div
+                      v-if="!imageLoaded['first-' + index]"
+                      class="loader"
+                    ></div>
+
                     <img
                       :src="item.path"
                       :alt="'Image ' + (index + 1)"
                       class="img-fluid"
                       loading="lazy"
+                      @load="handleImageLoad('first-' + index)"
                     />
                   </a>
                 </div>

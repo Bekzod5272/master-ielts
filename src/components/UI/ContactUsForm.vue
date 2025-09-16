@@ -61,7 +61,7 @@
     if (phoneDigits.length === 0) {
       phoneError.value = ''
     } else if (phoneDigits.length < 9) {
-      phoneError.value = t('validation.phoneRequired')
+      phoneError.value = t('validation.fullEnterPhone')
     } else if (phoneDigits.length === 9) {
       phoneError.value = ''
     } else {
@@ -82,12 +82,10 @@
     } else {
       const digits = phoneNumber.value.replace(/\D/g, '')
       const phoneDigits = digits.slice(3)
-
-      if (phoneDigits.length !== 9) {
+      if (phoneDigits.length < 9) {
         phoneError.value = t('validation.phoneFormat')
       }
     }
-
     if (!nameError.value && !phoneError.value) {
       axios
         .get(

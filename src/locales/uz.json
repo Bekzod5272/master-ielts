@@ -100,8 +100,8 @@
         "nameError": "Iltimos ismingizni kiriting",
         "nameFormat": "Ismingiz kamida 3 ta belgidan iborat bo'lishi kerak",
         "phoneRequired": "Telefon raqamini kiriting",
-        "phoneFormat": "Telefon raqami 9 bilan boshlanishi kerak",
-        "fullEnterPhone": "Telefon raqami to'liq kiriting",
+        "phoneFormat": "Telefon raqami noto'g'ri formatda",
+        "fullEnterPhone": "Telefon raqamini to'liq kiriting",
         "phoneFormatErr": "Telefon raqami noto'g'ri formatda"
     },
     "ielts": "IELTS"
