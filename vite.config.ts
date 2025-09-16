@@ -1,113 +1,203 @@
+// vite.config.ts - Tezlik uchun optimizatsiya qilingan
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-  ],
+  plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  },
-  
-  // Build optimizatsiyalari
-  build: {
-    // JavaScript minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // console.log larni production da olib tashlash
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'] // Boshqa console metodlari ham
-      }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-    
-    // Chunk optimizatsiyasi
+  },
+
+  build: {
+    minify: 'esbuild', // Terser o'rniga tezroq esbuild
+
     rollupOptions: {
       output: {
-        // Katta librarylarni alohida chunk qilish
-        manualChunks: {
-          // Vue ecosystem
-          'vue-vendor': ['vue', 'vue-router'],
-          
-          // Utilities
-          'utils': ['axios'],
-          
-          // UI components (agar ko'p bo'lsa)
-          // 'ui-components': ['@/components/UI/AppBtn.vue']
-        },
-        
-        // Fayl nomlarini optimize qilish
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.') || []
-          let extType = info[info.length - 1]
-          
-          // Fayllarni tur bo'yicha papkalarga joylashtirish
-          if (/\.(mp4|webm|ogg|mp3|wav|flac|aac)$/i.test(assetInfo.name || '')) {
-            extType = 'media'
-          } else if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(assetInfo.name || '')) {
-            extType = 'images'
-          } else if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            extType = 'fonts'
+        // YAXSHILANGAN chunk strategiyasi
+        manualChunks: (id) => {
+          // Node modules ni vendor chunk ga
+          if (id.includes('node_modules')) {
+            // Katta librarylarni alohida chunklar
+            if (id.includes('vue')) {
+              return 'vue-vendor'
+            }
+            if (id.includes('axios')) {
+              return 'http-vendor'
+            }
+            if (id.includes('@vueuse') || id.includes('lodash')) {
+              return 'utils-vendor'
+            }
+            // Qolgan kichik librarylar
+            return 'vendor'
           }
-          
-          return `assets/${extType}/[name]-[hash][extname]`
-        }
-      }
+
+          // Komponentlarni guruhlab chunk qilish
+          if (id.includes('/components/')) {
+            if (id.includes('/components/UI/')) {
+              return 'ui-components'
+            }
+            if (id.includes('/components/Pages/')) {
+              return 'page-components'
+            }
+          }
+
+          // Views (sahifalar) ni alohida
+          if (id.includes('/views/') || id.includes('/pages/')) {
+            return 'pages'
+          }
+        },
+
+        // Fayl nomlari optimizatsiyasi
+        chunkFileNames: (chunkInfo) => {
+          // Dynamic importlar uchun
+          if (chunkInfo.isDynamicEntry) {
+            return 'assets/js/dynamic/[name]-[hash].js'
+          }
+          return 'assets/js/[name]-[hash].js'
+        },
+        entryFileNames: 'assets/js/entry/[name]-[hash].js',
+
+        // YAXSHILANGAN asset file naming
+        assetFileNames: (assetInfo) => {
+          if (!assetInfo.name) return 'assets/misc/[name]-[hash][extname]'
+
+          const info = assetInfo.name.split('.')
+          const extType = info[info.length - 1].toLowerCase()
+
+          // Media fayllar
+          if (
+            ['mp4', 'webm', 'ogg', 'mp3', 'wav', 'flac', 'aac', 'm4a'].includes(
+              extType
+            )
+          ) {
+            return 'assets/media/[name]-[hash][extname]'
+          }
+
+          // Rasmlar - format bo'yicha ham ajratish
+          if (
+            [
+              'png',
+              'jpg',
+              'jpeg',
+              'gif',
+              'svg',
+              'webp',
+              'ico',
+              'avif',
+            ].includes(extType)
+          ) {
+            // Kichik iconlar va katta rasmlarni ajratish
+            const size =
+              assetInfo.name.includes('icon') || assetInfo.name.includes('logo')
+                ? 'icons'
+                : 'images'
+            return `assets/images/${size}/[name]-[hash][extname]`
+          }
+
+          // Font fayllar
+          if (['woff', 'woff2', 'eot', 'ttf', 'otf'].includes(extType)) {
+            return 'assets/fonts/[name]-[hash][extname]'
+          }
+
+          // CSS fayllar
+          if (extType === 'css') {
+            return 'assets/css/[name]-[hash][extname]'
+          }
+
+          // Boshqa fayllar
+          return 'assets/misc/[name]-[hash][extname]'
+        },
+      },
+
+      // External dependencies (CDN dan yuklash uchun)
+      external: (id) => {
+        // Katta librarylarni CDN dan yuklash mumkin
+        // return ['vue', 'vue-router'].includes(id)
+        return false // Hozircha barcha internal
+      },
     },
-    
-    // CSS code splitting
-    cssCodeSplit: true,
-    
-    // Chunk size warning ni oshirish (agar kerak bo'lsa)
+
+    // Chunk size optimization
     chunkSizeWarningLimit: 1000,
-    
-    // Source map ni production da o'chirish
-    sourcemap: false
+
+    // CSS code splitting yoqish
+    cssCodeSplit: true,
+
+    // Source map o'chirish (production)
+    sourcemap: false,
+
+    // Build target optimization
+    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'],
+
+    // Asset inlining threshold (kichik fayllarni inline qilish)
+    assetsInlineLimit: 4096, // 4KB dan kichik fayllar inline
   },
-  
-  // Development server optimizatsiyasi
-  server: {
-    // Warm up frequently used files
-    warmup: {
-      clientFiles: ['./src/main.ts', './src/App.vue']
-    }
+
+  // esbuild optimization
+  esbuild: {
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+    legalComments: 'none', // Legal commentlarni olib tashlash
   },
-  
-  // Pre-bundling optimizatsiyasi
-  optimizeDeps: {
-    include: ['vue', 'axios'],
-    // Agar boshqa katta librarylar ishlatilsa, ularni ham qo'shing
-    // include: ['vue', 'axios', 'lodash-es']
-  },
-  
-  // CSS optimizatsiyasi
+
+  // CSS optimization
   css: {
-    // Development da source map yo'q
     devSourcemap: false,
-    
-    // CSS preprocessor optimizatsiyalari
+
+    // PostCSS plugins
+    postcss: {
+      plugins: [
+        // Autoprefixer va boshqalar uchun
+      ],
+    },
+
+    // CSS preprocessor optimizatsiyasi
     preprocessorOptions: {
       scss: {
-        // SCSS import path optimizatsiyasi
-        additionalData: `@import "@/assets/main.scss";` // Agar global SCSS variablalari bo'lsa
-      }
-    }
+        // Charset warning ni o'chirish
+        charset: false,
+      },
+    },
   },
-  
-  // Asset handling optimizatsiyasi
-  assetsInclude: ['**/*.webp'], // WebP fayllarni asset sifatida qaralashi
-  
-  // Experimental features (agar Vue 3.3+ ishlatilsa)
+
+  // Pre-bundling optimizatsiyasi
+  optimizeDeps: {
+    include: ['vue', 'vue-router', 'axios'],
+    // Force include katta librarylar
+    force: false,
+  },
+
+  // Server optimizatsiyasi (development)
+  server: {
+    // File watching optimization
+    watch: {
+      usePolling: false,
+    },
+    // Warm up
+    warmup: {
+      clientFiles: ['./src/main.ts', './src/App.vue', './src/router/index.ts'],
+    },
+  },
+
+  // Experimental optimizatsiyalar
+  experimental: {
+    renderBuiltUrl(filename, { hostType }) {
+      // CDN URL lar uchun
+      if (hostType === 'js') {
+        return { js: `https://cdn.masterielts.uz/${filename}` }
+      }
+      return { relative: true }
+    },
+  },
+
+  // Vue specific optimizations
   define: {
-    // Production da Vue devtools ni o'chirish
     __VUE_PROD_DEVTOOLS__: false,
-    // Hydration mismatch details ni o'chirish
-    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
-  }
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
+  },
+
+  // Asset handling
+  assetsInclude: ['**/*.webp', '**/*.avif'], // Modern formatlar
 })
