@@ -138,27 +138,27 @@
         :class="{ 'enter-active': toggleMenu }"
       >
         <li @click="scrollToMainInfoPage()">
-          Main menu
+          {{ $t('main.menuText.home') }}
           <hr />
         </li>
         <li @click="scrollToInfoForIeltsIn()">
-          Speakingdan 8 olish uchun...
+          {{ $t('main.menuText.infoIelts') }}
           <hr />
         </li>
         <li @click="scrollToAboutMentors()">
-          IELTS 7+ olish uchun ...
+          {{ $t('main.menuText.aboutMentors') }}
           <hr />
         </li>
         <li @click="scrollToAboutCourse()">
-          Bizning kurslar
+          {{ $t('main.menuText.courses') }}
           <hr />
         </li>
         <li @click="scrollToAboutEducation()">
-          Galereya
+          {{ $t('main.menuText.results') }}
           <hr />
         </li>
         <li @click="scrollToAuthPage()">
-          Ro'yxatdan o'tish
+          {{ $t('main.menuText.contacts') }}
           <hr />
         </li>
       </ul>

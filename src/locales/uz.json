@@ -11,6 +11,14 @@
             "text1": " Be’pul birinchi darsga yozilib,",
             "text2": "o’z maqsadlaringizga erishish uchun ",
             "text3": "birinchi qadamni tashlang."
+        },
+        "menuText": {
+            "home": "Bosh sahifa",
+            "infoIelts": "Speakingdan 8 olish uchun ...",
+            "aboutMentors": "IELTS 7+ olish uchun ...",
+            "courses": "Kurslar",
+            "results": "Natijalar",
+            "contacts": "Kontaktlar"
         }
     },
     "infoIelts": {
