@@ -14,7 +14,9 @@
   const imageLoaded = ref<Record<string, boolean>>({})
 
   const handleImageLoad = (key: string) => {
-    imageLoaded.value[key] = true
+    setTimeout(() => {
+      imageLoaded.value[key] = true
+    }, 1000)
   }
 </script>
 <template>
