@@ -31,7 +31,9 @@
         <div class="course-list__item__content__info">
           <div class="about-ielts__header">
             <h2 class="about-ielts__title">
-              BIZNING<br /><span>KURSLAR</span>
+              {{ $t('aboutCourse.our') }}<br /><span>{{
+                $t('aboutCourse.course')
+              }}</span>
             </h2>
           </div>
           <h2 class="course-list__item-title">{{ item.btnText }}</h2>
@@ -51,6 +53,7 @@
   .swiper {
     .about-ielts__title {
       font-size: 42px;
+      text-transform: uppercase;
     }
 
     .course-list__item-description {

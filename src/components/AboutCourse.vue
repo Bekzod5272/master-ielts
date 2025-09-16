@@ -44,9 +44,10 @@
       path: '/images/ielts.speaking.webp',
     },
   ])
-  const combinedArray = dataInfoCourseFirstPage.value.concat(
-    dataInfoCourseSecondPage.value
-  )
+  const combinedArray = computed(() => [
+    ...dataInfoCourseFirstPage.value,
+    ...dataInfoCourseSecondPage.value,
+  ])
 </script>
 <template>
   <div class="about-ielts container">
