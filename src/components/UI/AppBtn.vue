@@ -6,11 +6,7 @@
 <template>
   <div class="custom-button">
     <img
-      :src="
-        locale === 'uz'
-          ? '/public/images/knopka.webp'
-          : '/public/images/button_2.webp'
-      "
+      :src="locale === 'uz' ? '/images/knopka.webp' : '/images/button_2.webp'"
       loading="lazy"
     />
   </div>
