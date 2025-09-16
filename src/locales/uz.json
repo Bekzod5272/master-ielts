@@ -84,6 +84,18 @@
         "yunusabod": "Yunusobod",
         "novza": "Novza"
     },
+    "footer": {
+        "infos": "Ma'lumotlar",
+        "aboutUs": "Biz haqimizda",
+        "teachers": "O'qituvchilar",
+        "courses": "Kurslar",
+        "results": "Natijalar",
+        "contacts": "Kontaktlar",
+        "timeWork": "Ishlash rejimi",
+        "mondaySaturday": "Dushanba - Shanba",
+        "address": "Manzil",
+        "region": "Toshkent,O'zbekiston"
+    },
     "validation": {
         "nameError": "Iltimos ismingizni kiriting",
         "nameFormat": "Ismingiz kamida 3 ta belgidan iborat bo'lishi kerak",

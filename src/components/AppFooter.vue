@@ -1,8 +1,10 @@
 <script setup lang="ts">
   import eventBus from '@/constants/eventBus'
+  import { useI18n } from 'vue-i18n'
   function handleCoursesClick(type) {
     eventBus.emit(type)
   }
+  const { t } = useI18n()
 </script>
 <template>
   <div class="footer container">
@@ -16,44 +18,46 @@
       </div>
       <div class="footer__nav">
         <div>
-          <p class="footer__nav__title">Ma'lumotlar</p>
+          <p class="footer__nav__title">{{ t('footer.infos') }}</p>
           <ul class="footer__nav__list">
             <li>
-              <a @click="handleCoursesClick('scroll-to-about-education')"
-                >Biz haqimizda</a
-              >
+              <a @click="handleCoursesClick('scroll-to-about-education')">
+                {{ t('footer.aboutUs') }}
+              </a>
             </li>
             <li>
-              <a @click="handleCoursesClick('scroll-to-about-result')"
-                >Natijalar</a
-              >
+              <a @click="handleCoursesClick('scroll-to-about-result')">
+                {{ t('footer.results') }}
+              </a>
             </li>
             <li>
-              <a @click="handleCoursesClick('scroll-to-about-course')"
-                >Kurslar</a
-              >
+              <a @click="handleCoursesClick('scroll-to-about-course')">
+                {{ t('footer.courses') }}
+              </a>
             </li>
             <li>
-              <a @click="handleCoursesClick('scroll-to-about-mentors')"
-                >O'qituvchilar</a
-              >
+              <a @click="handleCoursesClick('scroll-to-about-mentors')">
+                {{ t('footer.teachers') }}
+              </a>
             </li>
             <li>
-              <a @click="handleCoursesClick('scroll-to-auth')">Kontaktlar</a>
+              <a @click="handleCoursesClick('scroll-to-auth')">
+                {{ t('footer.contacts') }}
+              </a>
             </li>
           </ul>
         </div>
         <div class="footer__hours">
-          <p class="footer__nav__title">Ishlash rejimi</p>
+          <p class="footer__nav__title">{{ t('footer.timeWork') }}</p>
           <ul>
-            <li>Dushanba - Shanba</li>
+            <li>{{ t('footer.mondaySaturday') }}</li>
             <li>10:00 - 20:00</li>
             <li>13:00 - 14:00</li>
           </ul>
         </div>
         <div class="footer__address">
-          <p class="footer__address__title">Manzil</p>
-          <p class="footer__address__region">Toshkent, Oʻzbekiston</p>
+          <p class="footer__address__title">{{ t('footer.address') }}</p>
+          <p class="footer__address__region">{{ t('footer.region') }}</p>
           <div class="footer__social">
             <a
               href="https://t.me/ielts_masterielts"

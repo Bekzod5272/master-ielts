@@ -288,6 +288,9 @@
     top: 20px;
     right: 20px;
     font-size: 14px;
+    @media (max-width: 768px) {
+      right: 65px;
+    }
   }
   button {
     padding: 4px;
