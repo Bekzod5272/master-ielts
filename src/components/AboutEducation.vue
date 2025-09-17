@@ -31,8 +31,7 @@
           />
         </div>
         <div class="about-education-title">
-          <p>
-            {{ t('aboutEducation.title') }}
+          <p v-html="t('aboutEducation.title')">
           </p>
         </div>
       </div>
