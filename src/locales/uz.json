@@ -90,7 +90,8 @@
         "name": "Ismingiz",
         "phoneNumber": "Telefon raqamingiz",
         "yunusabod": "Yunusobod",
-        "novza": "Novza"
+        "novza": "Novza",
+        "beruniy": "Beruniy"
     },
     "footer": {
         "infos": "Ma'lumotlar",

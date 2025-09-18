@@ -197,6 +197,7 @@
             <div class="auth-contact__phone">
               <p>+99890 822 22 28 <br />{{ t('contactUsForm.yunusabod') }}</p>
               <p>+99891 777 77 33 <br />{{ t('contactUsForm.novza') }}</p>
+              <p>+99888 555 55 77 <br> {{ t('contactUsForm.beruniy') }}</p>
             </div>
           </div>
         </div>

@@ -43,7 +43,7 @@
           loading="lazy"
         />
         <p class="section__content__header__title">
-          {{ t('infoIelts.section.title4') }} <br />
+          {{ t('infoIelts.section.title7') }} <br />
           {{ t('infoIelts.section.title5') }}
         </p>
       </div>
